@@ -57,7 +57,7 @@ app.get('/actions', (req, res) => {
   console.log(body);
 let response =  `?id=${body.psid}&name=${body.A}&mail=${body.mail}`;
 res.status(200).send('Please close this window to return to the conversation thread.');
-//callflowxo(body.psid, response);
+callflowxo(body.psid, response);
 });
 
 
