@@ -31,7 +31,7 @@
       function success(thread_context) {
         // success
         document.getElementById("psid").value = thread_context.psid;
-        document.getElementById('submitButton').addEventListener('click', function () {
+        document.getElementById('submit').addEventListener('click', function () {
     MessengerExtensions.requestCloseBrowser(function success() {
         console.log("Webview closing");
     }, function error(err) {
@@ -53,6 +53,7 @@
 </head>
 
 <body style="background-color:#fafafa;">
+  <form id ="my_form" method="get" action="/actions" >
     <input type="hidden" name="psid" id="psid">
     <div class="main-container">
         <div class="page button js_show">
@@ -203,10 +204,13 @@
 
 
 
-                <a href="/actions" class="webvUI-btn webvUI-btn_primary">Submit</a>
+                <a href="javascript:{}" onclick="document.getElementById('my_form').submit(); return false;" class="webvUI-btn webvUI-btn_primary" id="submit">Submit</a>
             </div>
         </div>
     </div>
+  
+    
+  </form>
 </body>
 
 </html>
