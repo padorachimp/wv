@@ -1,13 +1,10 @@
+'use strict';
 // server.js
 // where your node app starts
 
 // init proje
 const PAGE_ACCESS_TOKEN = process.env.FB_ACCESS_TOKEN;
 const request = require('request');
-'use strict';
-const Facebook = require('./Facebook/facebook.js');
-const DFaction = require('./Dialogflow/dialogflow.js');
-const discord = require('./discord/discordbot.js');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -23,7 +20,7 @@ if (referer) {
     } else if (referer.indexOf('www.facebook.com') >= 0) {
         res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
     }
-    res.sendFile('public/index.html', {root: __dirname});
+    res.sendFile('New.html', {root: __dirname});
 }
   
 });
@@ -81,9 +78,9 @@ app.get('/actions', (req, res) => {
   
   let body = req.query;
   console.log(body);
-let response =  `?id=${body.psid}&name=${body.name}&mail=${body.mail}`;
+let response =  `?id=${body.psid}&name=${body.A}&mail=${body.mail}`;
 res.status(200).send('Please close this window to return to the conversation thread.');
-callflowxo(body.psid, response);
+//callflowxo(body.psid, response);
 });
 
 

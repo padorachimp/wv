@@ -21,10 +21,39 @@
         js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'Messenger'));
+      
+       window.extAsyncInit = function () {
+  // SDK loaded, code to follow
+        MessengerExtensions.getSupportedFeatures(function success(result) {
+  let features = result.supported_features;
+  if (features.indexOf("context") != -1) {
+    MessengerExtensions.getContext('582708698746933',
+      function success(thread_context) {
+        // success
+        document.getElementById("psid").value = thread_context.psid;
+        document.getElementById('submitButton').addEventListener('click', function () {
+    MessengerExtensions.requestCloseBrowser(function success() {
+        console.log("Webview closing");
+    }, function error(err) {
+        console.log(err);
+    });
+});
+      },
+      function error(err) {
+        console.log(err);
+      }
+    );
+  }
+}, function error(err) {
+  console.log(err);
+});
+};
+      
     </script>
 </head>
 
 <body style="background-color:#fafafa;">
+    <input type="hidden" name="psid" id="psid">
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
@@ -39,7 +68,7 @@
 
                 <div class="webvUI-cells webvUI-cells_radio">
                     <label class="webvUI-cell webvUI-check__label" for="x11">
-                        <div class="webvUI-cell__bd">
+                        <div class="webvUI-cell__bd" name="A">
                             <p>
                                 A
                             </p>
