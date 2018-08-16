@@ -12,7 +12,7 @@ $(function() {
             $page = $this.parents('.page'),
             $parent = $(this).parent('li');
         var innerH = $inner.data('height');
-        bear = $page;
+       var bear = $page;
 
         if (!innerH) {
             $inner.css('height', 'auto');
