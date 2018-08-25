@@ -21,8 +21,7 @@
         js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'Messenger'));
-      
-       window.extAsyncInit = function () {
+   window.extAsyncInit = function () {
   // SDK loaded, code to follow
         MessengerExtensions.getSupportedFeatures(function success(result) {
   let features = result.supported_features;
@@ -45,6 +44,7 @@
       }
     );
   }
+          else console.log("no context for youh",features);
 }, function error(err) {
   console.log(err);
 });
