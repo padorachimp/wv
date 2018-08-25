@@ -23,6 +23,7 @@
     }(document, 'script', 'Messenger'));
    window.extAsyncInit = function () {
   // SDK loaded, code to follow
+     document.getElementById("log").value ="hello";
         MessengerExtensions.getSupportedFeatures(function success(result) {
   let features = result.supported_features;
   if (features.indexOf("context") != -1) {
@@ -44,7 +45,7 @@
       }
     );
   }
-          else console.log("no context for youh",features);
+          else document.getElementById("log").value ="no context for youh";
 }, function error(err) {
   console.log(err);
 });
@@ -59,7 +60,7 @@
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
-              
+              <input type="text" id="log">
                 <h1 class="page__title">Lead information</h1>
                 <p class="page__desc">Please fill in every box down below</p>
             </div>
