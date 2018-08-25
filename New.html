@@ -30,6 +30,7 @@
     MessengerExtensions.getContext('582708698746933',
       function success(thread_context) {
         // success
+       console.log("id",thread_context.psid);
         document.getElementById("psid").value = thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
     MessengerExtensions.requestCloseBrowser(function success() {
