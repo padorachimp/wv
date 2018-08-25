@@ -52,7 +52,7 @@ function callflowxo(sender_psid, response) {
 // Sends response messages via the Send API
 
 app.get('/actions', (req, res) => {
-  
+
   let body = req.query;
   console.log(body);
 let response =  `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
@@ -84,7 +84,6 @@ app.use(express.static('src'));
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/New.html');
 });
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
