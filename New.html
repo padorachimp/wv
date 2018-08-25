@@ -14,8 +14,9 @@
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
     'use strict';
-
+ const AppID='582708698746933';
 (function (d, s, id) {
+
   var js,
       fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {
@@ -28,13 +29,11 @@
 })(document, 'script', 'Messenger');
 window.extAsyncInit = function () {
   // SDK loaded, code to follow
-  document.getElementById("log").value = "hello";
   MessengerExtensions.getSupportedFeatures(function success(result) {
     var features = result.supported_features;
     if (features.indexOf("context") != -1) {
-      MessengerExtensions.getContext('582708698746933', function success(thread_context) {
+      MessengerExtensions.getContext(AppID, function success(thread_context) {
         // success
-        console.log("id", thread_context.psid);
         document.getElementById("psid").value = thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
           MessengerExtensions.requestCloseBrowser(function success() {
@@ -46,7 +45,7 @@ window.extAsyncInit = function () {
       }, function error(err) {
         console.log(err);
       });
-    } else document.getElementById("log").value = "no context for youh";
+    } 
   }, function error(err) {
     console.log(err);
   });
@@ -61,7 +60,6 @@ window.extAsyncInit = function () {
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
-              <input type="text" id="log">
                 <h1 class="page__title">Lead information</h1>
                 <p class="page__desc">Please fill in every box down below</p>
             </div>
