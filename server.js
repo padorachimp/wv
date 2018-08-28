@@ -11,10 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
 
 // http://expressjs.com/en/starter/basic-routing.html
-//app.get('/', function(request, response) {response.sendFile(__dirname + '/New.html');});
-
-// listen for requests :)
-var listener = app.listen(process.env.PORT, function() {console.log('Your app is listening on port ' + listener.address().port);});
+app.get('/', function(request, response) {response.sendFile(__dirname + '/New.html');});
 
 
 app.get('/webview', (req, res) => {  
@@ -56,14 +53,6 @@ function callflowxo(sender_psid, response) {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
+// listen for requests :)
+var listener = app.listen(process.env.PORT, function() {console.log('Your app is listening on port ' + listener.address().port);});
 
