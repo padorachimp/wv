@@ -12,8 +12,9 @@
     <script type="text/javascript" src="webvUI.min.js"></script>
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
-   <script type="text/javascript">
 
+</head>
+   <script type="text/javascript" >
 
 
 
@@ -24,13 +25,12 @@
       fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {
     return;
-    alert('ok');
+    
   }
   js = d.createElement(s);
   js.id = id;
   js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
-   document.getElementById("demo").value = 'errors';
    
 })
 try{(document, 'script', 'Messenger');}
@@ -61,7 +61,6 @@ window.extAsyncInit = function () {
           }, function error(err) {
             console.log(err);
            alert ('closing webview err'+err);
-           document.getElementById("demo").value = 'closing webview err'+err
           });
         }
           catch(err)
@@ -84,10 +83,7 @@ window.extAsyncInit = function () {
 };}
       catch (err)
       {alert('err2:'+err);}
-      
     </script>
-</head>
-
 <body style="background-color:#fafafa;">
    
   <form id ="my_form" method="get" action="/actions" >
