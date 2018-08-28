@@ -15,15 +15,21 @@ app.get('/', function(request, response) {response.sendFile(__dirname + '/New.ht
 
 
 app.get('/webview', (req, res) => {  
+  console.log('a new re"quest made');
   let referer = req.get('Referer');
+  console.log('ref', referer);
   if (referer) {
           if (referer.indexOf('www.messenger.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
           } else if (referer.indexOf('www.facebook.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
+          } else if (referer.indexOf('www.facebook.com') >= 0) {
+              res.setHeader('X-Frame-Options', 'ALLOW-FROM https://staticxx.facebook.com/');
           }
           res.sendFile('New.html', {root: __dirname});
-      }});
+      }
+  res.send('wrong referer');
+});
 
 // Sends response messages via the Send API
 app.get('/actions', (req, res) => {
