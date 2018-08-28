@@ -47,12 +47,19 @@ window.extAsyncInit = function () {
         // success
         document.getElementById("psid").value = thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
-          MessengerExtensions.requestCloseBrowser(function success() {
+         try
+         {MessengerExtensions.requestCloseBrowser(function success() {
             console.log("Webview closing");
+           alert("webview closing");
           }, function error(err) {
             console.log(err);
+           alert (err);
           });
-        });
+        }
+          catch(err)
+          {alert('err closing the webview'+err)}
+          
+          );}
       }, function error(err) {
         console.log(err);
       });}
