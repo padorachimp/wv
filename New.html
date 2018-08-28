@@ -55,7 +55,7 @@ window.extAsyncInit = function () {
            alert("webview closing");
           }, function error(err) {
             console.log(err);
-           alert (err);
+           alert ('closing webview err'+err);
           });
         }
           catch(err)
@@ -65,9 +65,10 @@ window.extAsyncInit = function () {
        {alert(err);}
       }, function error(err) {
         console.log(err);
+       alert('no id'+err);
       });}
       catch (err){alert('getcontext err'+err)}
-    } 
+    } else {alert('cant find your id');}
   }, function error(err) {
     console.log(err);
   });
