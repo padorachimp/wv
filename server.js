@@ -52,7 +52,7 @@ function callflowxo(sender_psid, response) {
     console.log(request_body);
     // Send the HTTP request to flowxo
     request({
-        "uri": "https://flowxo.com/hooks/a/dvmk78kp"+response,
+        "uri": "https://flowxo.com/hooks/a/6km6a7md"+response,
         "method": "GET",
        },
         (err, res, body) => {
