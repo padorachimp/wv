@@ -13,7 +13,8 @@
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
-  try {
+      document.ready(function(){
+          try {
 	window.extAsyncInit = function() {
 		var AppID = '582708698746933';
 		// SDK loaded, code to follow
@@ -77,6 +78,7 @@
 	alert('err2:' + err);
 }
 
+      });
   </script>
 </head>
 

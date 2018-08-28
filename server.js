@@ -6,6 +6,7 @@ const request = require('request');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
@@ -19,19 +20,21 @@ app.get('/webview', (req, res) => {
   let referer = req.get('Referer');
   console.log('ref', referer);
   console.log('ref', referer.indexOf('staticxx.facebook.com'));
-  if (referer) {
-          if (referer.indexOf('www.messenger.com') >= 0) {
+ if (referer) {
+          /*if (referer.indexOf('www.messenger.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
           } else if (referer.indexOf('www.facebook.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
           } else if (referer.indexOf('staticxx.facebook.com') >= 0) {
               
-          }
+          }*/
     
-    res.setHeader('X-Frame-Options', 'ALLOW-FROM https://staticxx.facebook.com/,https://www.facebook.com/,  ');
-          res.sendFile('New.html', {root: __dirname});
+    //res.setHeader('X-Frame-Options', 'ALLOW-FROM https://staticxx.facebook.com/,https://www.facebook.com/,https://www.messenger.com/,https://glib-flyingfish.glitch.me/'); */
+          res.sendFile(path.join(__dirname+'/New.html'));
       }
-  res.send('wrong referer');
+  res.sendFile(path.join(__dirname+'/New.html'));
+  // res.status(501).send('Something went wrong');
+  // res.sendFile(path.join(__dirname+'/New.html'));
 });
 
 // Sends response messages via the Send API
