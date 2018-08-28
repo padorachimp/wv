@@ -18,14 +18,17 @@ app.get('/webview', (req, res) => {
   console.log('a new re"quest made');
   let referer = req.get('Referer');
   console.log('ref', referer);
+  console.log('ref', referer.indexOf('staticxx.facebook.com'));
   if (referer) {
           if (referer.indexOf('www.messenger.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
           } else if (referer.indexOf('www.facebook.com') >= 0) {
               res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
-          } else if (referer.indexOf('www.facebook.com') >= 0) {
-              res.setHeader('X-Frame-Options', 'ALLOW-FROM https://staticxx.facebook.com/');
+          } else if (referer.indexOf('staticxx.facebook.com') >= 0) {
+              
           }
+    
+    res.setHeader('X-Frame-Options', 'ALLOW-FROM https://staticxx.facebook.com/,https://www.facebook.com/,  ');
           res.sendFile('New.html', {root: __dirname});
       }
   res.send('wrong referer');
