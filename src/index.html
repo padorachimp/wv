@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Webview</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/webvUI.min.css">
+    <link rel="stylesheet" href="/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="webvUI.min.js"></script>
+    <script type="text/javascript" src="webvUI-menu.js"></script>
+    <script type="text/javascript" src="webvUI-slider.js"></script>
+    <script type="text/javascript">
+  try {
+	window.extAsyncInit = function() {
+		var AppID = '582708698746933';
+		// SDK loaded, code to follow
+		try {
+			MessengerExtensions.getSupportedFeatures(
+				function success(result) {
+					var features = result.supported_features;
+					if (features.indexOf('context') != -1) {
+						try {
+							MessengerExtensions.getContext(
+								AppID,
+								function success(thread_context) {
+									// success
+									try {
+										document.getElementById('psid').value = thread_context.psid;
+										alert('your id is :' + thread_context.psid);
+										document
+											.getElementById('submit')
+											.addEventListener('click', function() {
+												try {
+													MessengerExtensions.requestCloseBrowser(
+														function success() {
+															console.log('Webview closing');
+															alert('webview closing');
+														},
+														function error(err) {
+															console.log(err);
+															alert('closing webview err' + err);
+														}
+													);
+												} catch (err) {
+													alert('err closing the webview' + err);
+												}
+											});
+									} catch (err) {
+										alert(err);
+									}
+								},
+								function error(err) {
+									console.log(err);
+									alert('no id' + err);
+								}
+							);
+						} catch (err) {
+							alert('getcontext err' + err);
+						}
+					} else {
+						alert('cant find your id');
+					}
+				},
+				function error(err) {
+					console.log(err);
+					alert('supported features err ' + err);
+				}
+			);
+		} catch (err) {
+			alert('supported features err' + err);
+		}
+	};
+} catch (err) {
+	alert('err2:' + err);
+}
+
+  </script>
+</head>
+
+<body style="background-color:#fafafa;">
+   
+  <form id ="my_form" method="get" action="/actions" >
+     <input type="hiden" name="psid" id="psid">
+   
+    <div class="main-container">
+        <div class="page button js_show">
+            <div class="page__hd">
+              <input type="text" id="demo"  class="webvUI-input">
+                <h1 class="page__title">Lead information</h1>
+                <p class="page__desc">Please fill in every box down below</p>
+            </div>
+         
+            <div class="page__bd page__bd_spacing">
+
+                <div class="webvUI-cells__title">
+                    Product Select
+                </div>
+
+                <div class="webvUI-cells webvUI-cells_radio">
+                    <label class="webvUI-cell webvUI-check__label" for="x11">
+                        <div class="webvUI-cell__bd" >
+                            <p>
+                                A
+                            </p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <input type="radio" class="webvUI-check" name="radio1" id="x11">
+                            <span class="webvUI-icon-checked"></span>
+                        </div>
+                    </label>
+                    <label class="webvUI-cell webvUI-check__label" for="x12">
+                        <div class="webvUI-cell__bd">
+                            <p>
+                                B
+                            </p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <input type="radio" name="radio1" class="webvUI-check" id="x12" checked="checked">
+                            <span class="webvUI-icon-checked"></span>
+                        </div>
+                    </label>
+                    
+                </div>
+
+                <div class="webvUI-cells__title">
+                    Name
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="Name" name="Name"> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    Tel
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="Tel" name="Tel">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    Address
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="Address" name="Address">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    Township
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="Township" name="Town">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    District
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="District" name ="District">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    City
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="City" name="City">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="webvUI-cells__title">
+                    Zip Code
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="Zip Code" name="Zip">
+                        </div>
+                    </div>
+                </div>
+
+                         <div class="webvUI-cells">
+                        
+                            <div class="webvUI-cell webvUI-cell_select webvUI-cell_select-after">
+                                <div class="webvUI-cell__hd">
+                                    <label for="" class="webvUI-label">
+                                        country
+                                    </label>
+                                </div>
+                                <div class="webvUI-cell__bd">
+                                    <select class="webvUI-select" name="select">
+                                        <option value="China">
+                                            China
+                                        </option>
+                                        <option value="United States">
+                                            United States
+                                        </option>
+                                        <option value="United Kingdom">
+                                            United Kingdom
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                <button class="webvUI-btn webvUI-btn_primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+  </form>
+  
+  <script src="https://connect.facebook.com/en_US/messenger.Extensions.js"></script>  
+</body>
+
+</html>
