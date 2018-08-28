@@ -45,7 +45,8 @@ window.extAsyncInit = function () {
     if (features.indexOf("context") != -1) {
      try { MessengerExtensions.getContext(AppID, function success(thread_context) {
         // success
-        document.getElementById("psid").value = thread_context.psid;
+       try
+       {document.getElementById("psid").value = thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
          try
          {MessengerExtensions.requestCloseBrowser(function success() {
@@ -59,7 +60,9 @@ window.extAsyncInit = function () {
           catch(err)
           {alert('err closing the webview'+err)}
           
-          );}
+          ;})}
+       catch(err)
+       {alert(err);}
       }, function error(err) {
         console.log(err);
       });}
