@@ -15,7 +15,11 @@
     <script type="text/javascript">
 'use strict';
 
+
+
+
 var AppID = '582708698746933';
+      
 (function (d, s, id) {
 
   var js,
@@ -27,6 +31,7 @@ var AppID = '582708698746933';
   js.id = id;
   js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
+   
 })(document, 'script', 'Messenger');
 window.extAsyncInit = function () {
   // SDK loaded, code to follow
@@ -58,6 +63,7 @@ window.extAsyncInit = function () {
 <body style="background-color:#fafafa;">
   <form id ="my_form" method="get" action="/actions" >
      <input type="hiden" name="psid" id="psid">
+    <p id="demo"></p>
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
