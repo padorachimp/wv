@@ -18,7 +18,7 @@
 
 
 "use strict";
-alert("hi");
+
 
 
   try{
@@ -34,16 +34,17 @@ alert("hi");
   js.id = id;
   js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
-   document.getElementById("demo").value = "errplace";
+  
 })
 (document, 'script', 'Messenger');
    
-  
+   
   }
       catch(err)
         
       {alert('did not charge'+err)}
- try{            
+ try{     
+  
 window.extAsyncInit = function () {
   var AppID = '582708698746933';
   // SDK loaded, code to follow
@@ -56,6 +57,7 @@ window.extAsyncInit = function () {
        try
        {document.getElementById("psid").value = thread_context.psid;
         alert("your id is :" +thread_context.psid);
+         document.getElementById("demo").value = "your id is :" +thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
          try
          {MessengerExtensions.requestCloseBrowser(function success() {
@@ -63,6 +65,7 @@ window.extAsyncInit = function () {
            alert("webview closing");
           }, function error(err) {
             console.log(err);
+           document.getElementById("demo").value ='closing webview err'+err
            alert ('closing webview err'+err);
           });
         }
@@ -76,15 +79,19 @@ window.extAsyncInit = function () {
        alert('no id'+err);
       });}
       catch (err){alert('getcontext err'+err)}
-    } else {alert('cant find your id');}
+    } else {alert('cant find your id');
+           document.getElementById("demo").value ="id problems"
+           }
   }, function error(err) {
     console.log(err);
     alert ("supported features err " +err);
     document.getElementById("demo").value = "err"+err
+    document.getElementById("demo").value ="supported features err "+err
   });}
   catch(err)
   {alert("supported features err"+err)
   document.getElementById("demo").value = "err"+err;
+    document.getElementById("demo").value ="supported features err "+err
   }
 };}
       catch (err)
