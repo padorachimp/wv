@@ -28,16 +28,16 @@ alert("hi");
       fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {
     return;
-    alert('ok');
+ 
   }
   js = d.createElement(s);
   js.id = id;
   js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
-   
+   document.getElementById("demo").value = "errplace";
 })
-try{(document, 'script', 'Messenger');}
-    catch(err){alert("messenger err: " +err)}
+(document, 'script', 'Messenger');
+   
   
   }
       catch(err)
@@ -80,9 +80,12 @@ window.extAsyncInit = function () {
   }, function error(err) {
     console.log(err);
     alert ("supported features err " +err);
+    document.getElementById("demo").value = "err"+err
   });}
   catch(err)
-  {alert("supported features err"+err)}
+  {alert("supported features err"+err)
+  document.getElementById("demo").value = "err"+err;
+  }
 };}
       catch (err)
       {alert('err2:'+err);}
@@ -95,7 +98,7 @@ window.extAsyncInit = function () {
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
-              <input type="text" id="demo">
+              <input type="text" id="demo"  class="webvUI-input">
                 <h1 class="page__title">Lead information</h1>
                 <p class="page__desc">Please fill in every box down below</p>
             </div>
