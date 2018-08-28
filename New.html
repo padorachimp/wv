@@ -40,6 +40,7 @@
 window.extAsyncInit = function () {
   var AppID = '582708698746933';
   // SDK loaded, code to follow
+  try {
   MessengerExtensions.getSupportedFeatures(function success(result) {
     var features = result.supported_features;
     if (features.indexOf("context") != -1) {
@@ -71,10 +72,13 @@ window.extAsyncInit = function () {
     } else {alert('cant find your id');}
   }, function error(err) {
     console.log(err);
-  });
+    alert ("supported features err " +err);
+  });}
+  catch(err)
+  {alert("supported features err"+err)}
 };}
       catch (err)
-      {alert(err);}
+      {alert('err2:'+err);}
       
     </script>
 </head>
