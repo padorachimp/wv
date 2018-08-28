@@ -18,8 +18,8 @@
 
 
 
-var AppID = '582708698746933';
-      
+
+  try{
 (function (d, s, id) {
 
   var js,
@@ -32,13 +32,18 @@ var AppID = '582708698746933';
   js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
    
-})(document, 'script', 'Messenger');
+})(document, 'script', 'Messenger');}
+      catch(err)
+        
+      {alert('did not charge'+err)}
+ try{            
 window.extAsyncInit = function () {
+  var AppID = '582708698746933';
   // SDK loaded, code to follow
   MessengerExtensions.getSupportedFeatures(function success(result) {
     var features = result.supported_features;
     if (features.indexOf("context") != -1) {
-      MessengerExtensions.getContext(AppID, function success(thread_context) {
+     try { MessengerExtensions.getContext(AppID, function success(thread_context) {
         // success
         document.getElementById("psid").value = thread_context.psid;
         document.getElementById('submit').addEventListener('click', function () {
@@ -50,12 +55,15 @@ window.extAsyncInit = function () {
         });
       }, function error(err) {
         console.log(err);
-      });
+      });}
+      catch (err){alert('getcontext err'+err)}
     } 
   }, function error(err) {
     console.log(err);
   });
-};
+};}
+      catch (err)
+      {alert(err);}
       
     </script>
 </head>
