@@ -12,23 +12,21 @@
     <script type="text/javascript" src="webvUI.min.js"></script>
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
-    <script type="text/javascript">
-'use strict';
-
-
-alert('hi this is an alert');
-      
+   <script >
+ document.getElementById("demo").innerHTML = "hi";
       
     </script>
 </head>
 
 <body style="background-color:#fafafa;">
+   
   <form id ="my_form" method="get" action="/actions" >
      <input type="hiden" name="psid" id="psid">
-    <p id="demo"></p>
+   
     <div class="main-container">
         <div class="page button js_show">
             <div class="page__hd">
+              <h1 id="demo"></h1>
                 <h1 class="page__title">Lead information</h1>
                 <p class="page__desc">Please fill in every box down below</p>
             </div>
@@ -180,7 +178,7 @@ alert('hi this is an alert');
             </div>
         </div>
     </div>
-  
+   
     
   </form>
 </body>
