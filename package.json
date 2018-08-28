@@ -7,14 +7,17 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "pretty": "prettier --single-quote --use-tabs es5 --write ./*.html"
   },
   "dependencies": {
     "express": "^4.16.3",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "npm-update-all": "^1.0.1",
+    "prettier": "^1.14.2"
   },
   "engines": {
-    "node": "8.x"
+    "node": "10.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
