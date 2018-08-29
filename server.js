@@ -62,6 +62,7 @@ app.get('/actions', (req, res) => {
 
 app.post('/logs', (req, res) => {
 	console.log('Logging...');
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 	let message = req.body.message;
 	let o = req.body.o;
 	if (o) {
@@ -82,7 +83,7 @@ app.post('/logs', (req, res) => {
 		m.getUTCMinutes() +
 		':' +
 		m.getUTCSeconds();
-	message = '\n' + dateString + ' -- ' + message + '\n';
+	message = '\n' + dateString + ' -- ' + ip + ' -- ' + message + '\n';
 	var fs = require('fs');
 	fs.appendFile(path.join(__dirname + '/log.txt'), message, function(err) {
 		if (err) {
