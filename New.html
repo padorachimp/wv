@@ -60,17 +60,8 @@ sendlogs(" ****** user connected *******");
 										document
 											.getElementById('submit')
 											.addEventListener('click', function() {
-                      var paramObj = {};
-                      $.each($('#my_form').serializeArray(), function(_, kv) {
-                        if (paramObj.hasOwnProperty(kv.name)) {
-                          paramObj[kv.name] = $.makeArray(paramObj[kv.name]);
-                          paramObj[kv.name].push(kv.value);
-                        }
-                        else {
-                          paramObj[kv.name] = kv.value;
-                        }
-                      });
-                      sendlogs("User submitted", paramObj);
+                      getparams();
+                      
 												try {
 													MessengerExtensions.requestCloseBrowser(
 														function success() {
@@ -112,6 +103,28 @@ sendlogs(" ****** user connected *******");
 		}
 	};
    }catch(err){sendlogs("init method"+err);}
+      function getparams()
+{var paramObj = {};
+$.each($("#my_form").serializeArray(), function(a, b) {
+  paramObj.hasOwnProperty(b.name)
+    ? ((paramObj[b.name] = $.makeArray(paramObj[b.name])),
+      paramObj[b.name].push(b.value))
+    : (paramObj[b.name] = b.value);
+});
+ sendlogs("User submitted", paramObj);
+  return new Promise(function(j, k) {
+    return $.ajax({
+      type: "POST",
+      url: "https://glib-flyingfish.glitch.me/actions",
+      dataType: "json",
+      data: paramObj,
+      success: function(m) {
+        m ? j(m) : k("opsi");
+      }
+    });
+  });
+ 
+}
   </script>
 </head>
 
@@ -127,26 +140,8 @@ sendlogs(" ****** user connected *******");
    </script>
   
   <!--
-use this function to get form data - then send form data to server using js only ok 7obbi sama7ni
-function getparams()
-{var paramObj = {};
-$.each($("#my_form").serializeArray(), function(a, b) {
-  paramObj.hasOwnProperty(b.name)
-    ? ((paramObj[b.name] = $.makeArray(paramObj[b.name])),
-      paramObj[b.name].push(b.value))
-    : (paramObj[b.name] = b.value);
-});
-  return new Promise(function(j, k) {
-    return $.ajax({
-      type: "POST",
-      url: "https://glib-flyingfish.glitch.me/actions",
-      dataType: "json",
-      data: aramObj,
-      success: function(m) {
-        m ? j(m) : k("opsi");
-      }
-    });
-  });
+use this function to get form data - then send form data to server using js only ok 7obbi sama7ni !-->
+
 
 
 }
@@ -295,7 +290,7 @@ $.each($("#my_form").serializeArray(), function(a, b) {
                             </div>
                         </div>
 
-                <button class="webvUI-btn webvUI-btn_primary" onclick="getparams();" id="submit">Submit</button>
+                <button class="webvUI-btn webvUI-btn_primary" onclick="submit=flase;" id="submit">Submit</button>
             </div>
         </div>
     </div>

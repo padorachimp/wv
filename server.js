@@ -51,10 +51,11 @@ app.get('/webview', (req, res) => {
 
 // Sends response messages via the Send API
 app.post('/actions', (req, res) => {
-	let body = req.aramObj;
-	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
+	let body = req.paramObj;
+	/*let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
-	callflowxo(body.psid, response);
+	callflowxo(body.psid, response);*/
+  console.log(body);
 	res
 		.status(200)
 		.send('Please close this window to return to the conversation thread.');
