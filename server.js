@@ -48,7 +48,7 @@ app.post("/logs",(req, res) => {
  let message = req.body.message;
   console.log("***log "+message);
   var fs = require('fs');
-fs.appendFile('../app/myfile.txt', message, function(err) {
+fs.appendFile('../app/log.txt', message, function(err) {
     if(err) {
         return console.log(err);
     }
