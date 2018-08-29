@@ -22,3 +22,35 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 14:21:53 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"qDyI-O9Hbo7uqoO_2FJLZ17MnJS8BoEBYGWLLUhtKLY.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTUyNTEyLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
 
 2018/8/29 14:21:53 -- id : 2002074593177887
+
+2018/8/29 14:25:40 --  ****** user connected *******
+
+2018/8/29 14:25:40 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 14:25:40 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"nzDsX5Pwi9yj1UjRJ6FcQQFU-dzNaj4PqaK_slieZZ8.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTUyNzQwLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 14:25:40 -- id : 2002074593177887
+
+2018/8/29 14:25:41 -- User submitted
+
+2018/8/29 14:27:23 --  ****** user connected *******
+
+2018/8/29 14:27:23 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 14:27:24 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"uKOEwHyr0gEPDD68BJaG8gpgBwS5uz-rLcwKYvX28hA.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTUyODQzLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 14:27:24 -- id : 2002074593177887
+
+2018/8/29 14:27:27 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"qfdqsdf","Tel":"qsdfqsdf","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 14:34:6 --  ****** user connected *******
+
+2018/8/29 14:34:6 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 14:34:7 -- id : 1732502830139116
+
+2018/8/29 14:34:7 -- id : 1732502830139116	{"tid":"2142568132442967","thread_type":"USER_TO_USER","psid":"1732502830139116","signed_request":"c4Dgu-F8M7RJTILdElVeCmbB3ddnFX2SdPBBT7Mj7rU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTUzMjQ2LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19VU0VSIiwidGlkIjoiMjE0MjU2ODEzMjQ0Mjk2NyJ9","metadata":null}
+
+2018/8/29 14:34:7 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 14:34:7 -- closing webview
