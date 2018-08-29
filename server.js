@@ -23,27 +23,32 @@ app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
 	let referer = req.get('Referer');
 	console.log('ref', referer);
-	function refFound(ref){ console.log('ref found', ref) }
+	function refFound(ref) {
+		console.log('ref found', ref);
+	}
 	if (referer) {
 		if (referer.indexOf('www.messenger.com') >= 0) {
-      refFound('www.messenger.com');
+			refFound('www.messenger.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
 		} else if (referer.indexOf('www.facebook.com') >= 0) {
-      refFound('www.facebook.com');
+			refFound('www.facebook.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
 		} else if (referer.indexOf('staticxx.facebook.com') >= 0) {
-      refFound('staticxx.facebook.com');
+			refFound('staticxx.facebook.com');
 			res.setHeader(
 				'X-Frame-Options',
 				'ALLOW-FROM https://staticxx.facebook.com/'
 			);
 		} else if (referer.indexOf('m.facebook.com') >= 0) {
-      refFound('m.facebook.com');
+			refFound('m.facebook.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM http://m.facebook.com/');
-		} else if(referer.indexOf('glib-flyingfish.glitch.me') >= 0){
-      refFound('glib-flyingfish.glitch.me');
-      res.setHeader('X-Frame-Options', 'ALLOW-FROM https://glib-flyingfish.glitch.me/');
-    }
+		} else if (referer.indexOf('glib-flyingfish.glitch.me') >= 0) {
+			refFound('glib-flyingfish.glitch.me');
+			res.setHeader(
+				'X-Frame-Options',
+				'ALLOW-FROM https://glib-flyingfish.glitch.me/'
+			);
+		}
 		return res.sendFile(path.join(__dirname + '/New.html'));
 	}
 	res.status(501).send('Something went wrong');
@@ -52,11 +57,11 @@ app.get('/webview', (req, res) => {
 // Sends response messages via the Send API
 app.post('/actions', (req, res) => {
 	let body = req.body.paramObj;
-  console.log("submitted to server");
+	console.log('submitted to server');
 	/*let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	callflowxo(body.psid, response);*/
-  console.log(body);
+	console.log(body);
 	res
 		.status(200)
 		.send('Please close this window to return to the conversation thread.');
@@ -64,7 +69,7 @@ app.post('/actions', (req, res) => {
 
 app.post('/logs', (req, res) => {
 	console.log('Logging...');
-  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+	var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 	let message = req.body.message;
 	let o = req.body.o;
 	if (o) {

@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "pretty": "prettier --single-quote --use-tabs es5 --write ./**.js"
+    "pretty": "prettier --single-quote --use-tabs es5 --write ./**/*.js"
   },
   "dependencies": {
     "express": "^4.16.3",

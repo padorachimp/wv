@@ -604,3 +604,47 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 17:41:58 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 -- id : 2002074593177887
 
 2018/8/29 17:42:1 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:54:23 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.24 --  ****** user connected *******
+
+2018/8/29 17:54:23 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 17:54:24 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"h86bclcvAqlBYxXs3m8_dTSkJneu9zqoygtZbq9WnHs.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY1MjYzLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 17:54:24 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- id : 2002074593177887
+
+2018/8/29 17:54:30 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.177 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:54:30 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- closing webview
+
+2018/8/29 17:56:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 --  ****** user connected *******
+
+2018/8/29 17:56:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 17:56:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"1SU8CDadyookbKTOuJaTPOk87bRd4OrwJ1rk9TwUqmg.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY1NDA0LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 17:56:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- id : 2002074593177887
+
+2018/8/29 17:56:45 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:56:45 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:0:15 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 --  ****** user connected *******
+
+2018/8/29 18:0:15 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.203 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:0:15 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"6vRBMqUKtRgqhMuXQ7SPiBiRH5e5rN7ZNvcl4i52guw.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY1NjE1LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 18:0:15 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.203 -- id : 2002074593177887
+
+2018/8/29 18:0:19 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"dsqfs","Tel":"sdf","Address":"sdf","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:1:8 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"dsqfs","Tel":"sdf","Address":"sdf","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:1:13 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 --  ****** user connected *******
+
+2018/8/29 18:1:13 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.203 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:1:13 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"rCVvVUEBiPMjfCMhDmLqunGylaE-KjxjVfhTjxYKJuk.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY1NjczLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 18:1:13 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 -- id : 2002074593177887
