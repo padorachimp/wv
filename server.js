@@ -44,8 +44,9 @@ app.get('/actions', (req, res) => {
 });
 
 app.post("/logs",(req, res) => {
- let body = req.query;
-  console.log(body);
+   console.log('a new re"quest made for logs');
+ let message = req.message;
+  console.log(message);
 
 
 })

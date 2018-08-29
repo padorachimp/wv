@@ -13,9 +13,26 @@
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
+      
+      function sendlogs(text)
+{      
+       var URL= "https://glib-flyingfish.glitch.me/logs";
+       var formData = {message:text};
+       return new Promise((resolve, reject) =>
+          $.ajax({
+            type: 'POST',
+            url: URL ,
+            dataType: 'json',
+            data: formData,
+            success: function(data) 
+           {if (data) {resolve(data);}
+            else {reject("opsi");}}}));  
+}
+  sendlogs("hi") ;   
+      
       try
       {  var xhr = new XMLHttpRequest();
-xhr.open("POST", "/logs", true);
+xhr.open("POST", "https://glib-flyingfish.glitch.me/logs", true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
     value: value
