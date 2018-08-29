@@ -1,44 +1,41 @@
+"use strict";
 function getparams() {
-	return new Promise(function(res, rej) {
-		var paramObj = {};
-		$.each($('#my_form').serializeArray(), function(a, b) {
-			paramObj.hasOwnProperty(b.name)
-				? ((paramObj[b.name] = $.makeArray(paramObj[b.name])),
-				  paramObj[b.name].push(b.value))
-				: (paramObj[b.name] = b.value);
-		});
-		sendlogs('User submitted', paramObj);
-
-		function sendDataToserver(data) {
-			return new Promise(function(res, rej) {
-				$.ajax({
-					type: 'POST',
-					url: 'https://glib-flyingfish.glitch.me/actions',
-					dataType: 'json',
-					data: data,
-					success: function(m) {
-						res(m);
-					},
-					error: function(jqXHR, textStatus, errorThrown ){
-						rej({jqXHR, textStatus, errorThrown});
-					}
-				});
-			});
-		}
-
-		console.log('sending data to server', paramObj);
-		sendDataToserver(paramObj)
-			.then(function() {
-				console.log('Data successfully sent', paramObj);
-				sendlogs('Data successfully sent', paramObj);
-				res(true);
-			})
-			.catch(function(e) {
-				console.log('Error sending data', e)
-				sendlogs('Error sending data', e);
-				rej(false);
-			});
-	});
+  return new Promise(function(c, d) {
+    var g = {};
+    $.each($("#my_form").serializeArray(), function(h, i) {
+      g.hasOwnProperty(i.name)
+        ? ((g[i.name] = $.makeArray(g[i.name])), g[i.name].push(i.value))
+        : (g[i.name] = i.value);
+    }),
+      sendlogs("User submitted", g),
+      console.log("sending data to server", g),
+      (function(h) {
+        return new Promise(function(i, j) {
+          $.ajax({
+            type: "POST",
+            url: "https://glib-flyingfish.glitch.me/actions",
+            dataType: "json",
+            data: h,
+            success: function success(k) {
+              i(k);
+            },
+            error: function error(k, l, n) {
+              j({ jqXHR: k, textStatus: l, errorThrown: n });
+            }
+          });
+        });
+      })(g)
+        .then(function() {
+          console.log("Data successfully sent", g),
+            sendlogs("Data successfully sent", g),
+            c(!0);
+        })
+        .catch(function(h) {
+          console.log("Error sending data", h),
+            sendlogs("Error sending data", h),
+            d(!1);
+        });
+  });
 }
 
 function sendlogs(b) {

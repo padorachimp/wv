@@ -912,3 +912,15 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 21:34:32 -- 196.234.202.96,::ffff:10.10.11.196,::ffff:10.10.10.254 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"vl6X1hjllHBkWhUOspuluDnCQALVKD0CEP8kHUSLhbs.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTc4NDcwLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
 
 2018/8/29 21:34:32 -- 196.234.202.96,::ffff:10.10.11.196,::ffff:10.10.10.31 -- id : 1732502830139116
+
+2018/8/29 21:36:23 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.31 --  ****** user connected *******
+
+2018/8/29 21:36:24 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 21:36:24 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.31 -- id : 1732502830139116	{"signed_request":"TVxAA0Q9p8tv4Xri2l8ABBQs3qQggvI9G_MxfsyDYDE.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTc4NTg0LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
+
+2018/8/29 21:36:24 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- id : 1732502830139116
+
+2018/8/29 21:36:31 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 21:36:32 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.177 -- Data successfully sent	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
