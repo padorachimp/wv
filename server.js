@@ -47,6 +47,14 @@ app.post("/logs",(req, res) => {
    console.log('a new re"quest made for logs');
  let message = req.body.message;
   console.log("***log "+message);
+  var fs = require('fs');
+fs.appendFile("logs.txt", message, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+});
 
 
 })
