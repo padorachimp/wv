@@ -8,35 +8,35 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="/webvUI.min.css">
     <link rel="stylesheet" href="/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="webvUI.min.js"></script>
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
-function sendlogs(a, o=undefined) {
-  var c = { message: a };
-  if(o){
-    try{
-    c.o=JSON.stringify(o);
-    }catch(ex){
-      alert('horrible exception happened' + ex.toString());
+   function sendlogs(b) {
+  var i =
+      1 < arguments.length && arguments[1] !== void 0 ? arguments[1] : void 0,
+    h = { message: b };
+  if (i)
+    try {
+      h.o = JSON.stringify(i);
+    } catch (j) {
+      alert("horrible exception happened" + j.toString());
     }
-  }
-    
-  return new Promise(function(e, f) {
+  return new Promise(function(j, k) {
     return $.ajax({
       type: "POST",
       url: "https://glib-flyingfish.glitch.me/logs",
       dataType: "json",
-      data: c,
-      success: function success(g) {
-        g ? e(g) : f("opsi");
+      data: h,
+      success: function(m) {
+        m ? j(m) : k("opsi");
       }
     });
   });
 }
 sendlogs(" ****** user connected *******");
-
    try{ 
 	window.extAsyncInit = function() {
 		var AppID = '582708698746933';

@@ -7,9 +7,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
+const nocache = require('nocache');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
+app.use(nocache());
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
@@ -20,20 +23,27 @@ app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
 	let referer = req.get('Referer');
 	console.log('ref', referer);
-	console.log('ref', referer.indexOf('staticxx.facebook.com'));
+	function refFound(ref){ console.log('ref found', ref) }
 	if (referer) {
 		if (referer.indexOf('www.messenger.com') >= 0) {
+      refFound('www.messenger.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
 		} else if (referer.indexOf('www.facebook.com') >= 0) {
+      refFound('www.facebook.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
 		} else if (referer.indexOf('staticxx.facebook.com') >= 0) {
+      refFound('staticxx.facebook.com');
 			res.setHeader(
 				'X-Frame-Options',
 				'ALLOW-FROM https://staticxx.facebook.com/'
 			);
 		} else if (referer.indexOf('m.facebook.com') >= 0) {
-			res.setHeader('X-Frame-Options', 'ALLOW-FROM http://m.facebook.com');
-		}
+      refFound('m.facebook.com');
+			res.setHeader('X-Frame-Options', 'ALLOW-FROM http://m.facebook.com/');
+		} else {
+      refFound('NOT FOUND');
+      res.setHeader('X-Frame-Options', 'ALLOW-FROM https://glib-flyingfish.glitch.me/');
+    }
 		return res.sendFile(path.join(__dirname + '/New.html'));
 	}
 	res.status(501).send('Something went wrong');
