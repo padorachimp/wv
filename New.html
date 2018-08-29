@@ -45,6 +45,7 @@ sendlogs("hi");
 								AppID,
 								function success(thread_context) {
 									// success
+                  	sendlogs("id : "+thread_context.psid);
 									try {
 										document.getElementById('psid').value = thread_context.psid;
 										sendlogs("id : "+thread_context.psid);
@@ -67,12 +68,12 @@ sendlogs("hi");
 												}
 											});
 									} catch (err) {
-										alert(err);
+										sendlogs("problem in psid"+err);
 									}
 								},
 								function error(err) {
 									console.log(err);
-									
+										sendlogs("err getting id : "+err);
 								}
 							);
 						} catch (err) {sendlogs("get context err : "+err);
@@ -83,12 +84,12 @@ sendlogs("hi");
 					}
 				},
 				function error(err) {
-					console.log(err);
+					sendlogs(err);
 					
 				}
 			);
 		} catch (err) {
-			
+			sendlogs(err);
 		}
 	};
    }catch(err){sendlogs("init method"+err);}
