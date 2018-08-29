@@ -828,3 +828,67 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 18:34:51 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
 
 2018/8/29 18:34:51 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- Error sending data	{"jqXHR":{"readyState":4,"responseText":"Please close this window to return to the conversation thread.","status":200,"statusText":"OK"},"textStatus":"parsererror","errorThrown":{}}
+
+2018/8/29 18:36:47 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:36:48 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- Error sending data	{"jqXHR":{"readyState":4,"responseText":"{\"success\":\"Please close this window to return to the conversation thread.\"}","status":200,"statusText":"OK"},"textStatus":"parsererror","errorThrown":{}}
+
+2018/8/29 18:39:4 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.177 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:39:4 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.58 -- Error sending data	{"jqXHR":{"readyState":4,"responseText":"{\"success\":\"Please close this window to return to the conversation thread.\"}","status":200,"statusText":"OK"},"textStatus":"parsererror","errorThrown":{}}
+
+2018/8/29 18:39:31 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:39:31 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.24 -- Error sending data	{"jqXHR":{"readyState":4,"responseText":"{\"success\":\"Please close this window to return to the conversation thread.\"}","status":200,"statusText":"OK"},"textStatus":"parsererror","errorThrown":{}}
+
+2018/8/29 18:39:41 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 --  ****** user connected *******
+
+2018/8/29 18:39:41 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:39:42 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- id : 2002074593177887
+
+2018/8/29 18:39:42 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.24 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"PLKvI5Rd1hwpfZSlMNN4EUPZJfBUpMgFu7DoAdge6uI.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY3OTgxLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 18:39:43 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:39:43 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.177 -- Data successfully sent	{"psid":"2002074593177887","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:40:40 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.24 --  ****** user connected *******
+
+2018/8/29 18:40:40 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.58 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:40:40 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.58 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"om2mc3pZuViZ3q1oVOyYImPc_NDxxZlxVTaJ3vz8nlY.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY4MDQwLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 18:40:40 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- id : 2002074593177887
+
+2018/8/29 18:40:44 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"qdf","Tel":"qdsf","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:40:44 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- Error sending data	{"jqXHR":{"readyState":4,"responseText":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>SyntaxError: Unexpected token o in JSON at position 1<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at app.post (/app/server.js:64:15)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/express/4.16.3/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at nocache (/rbd/pnpm-volume/667528ad-f6a5-4144-bb20-e25a7d5b36ca/node_modules/.registry.npmjs.org/nocache/2.0.0/node_modules/nocache/index.js:8:5)</pre>\n</body>\n</html>\n","status":500,"statusText":"Internal Server Error"},"textStatus":"error","errorThrown":"Internal Server Error"}
+
+2018/8/29 18:43:39 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"qdf","Tel":"qdsf","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:43:39 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- Data successfully sent	{"psid":"2002074593177887","radio1":"on","Name":"qdf","Tel":"qdsf","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 18:44:21 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.24 --  ****** user connected *******
+
+2018/8/29 18:44:21 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.177 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:44:21 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.203 -- id : 2002074593177887	{"tid":"2002074593177887","thread_type":"USER_TO_PAGE","psid":"2002074593177887","signed_request":"rOoh4uoM4K9mbVaAzas-ZokFtK6AmpVVadDM9_8z5Yk.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY4MjYxLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","metadata":null}
+
+2018/8/29 18:44:21 -- 41.230.128.232,::ffff:10.10.11.196,::ffff:10.10.10.105 -- id : 2002074593177887
+
+2018/8/29 18:44:42 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"SSSSS","Tel":"","Address":"","Town":"s","District":"","City":"nnn","Zip":"23","select":"United States"}
+
+2018/8/29 18:44:43 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.105 -- Data successfully sent	{"psid":"2002074593177887","radio1":"on","Name":"SSSSS","Tel":"","Address":"","Town":"s","District":"","City":"nnn","Zip":"23","select":"United States"}
+
+2018/8/29 18:45:43 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 --  ****** user connected *******
+
+2018/8/29 18:45:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 18:45:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- id : 2002074593177887	{"signed_request":"ZVNV4BkikGY-TyqrkDodmfgsCGOMO6DcNuy3cUs0_yA.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTY4MzQ0LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","tid":"2002074593177887","psid":"2002074593177887","thread_type":"USER_TO_PAGE"}
+
+2018/8/29 18:45:44 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.177 -- id : 2002074593177887
+
+2018/8/29 18:45:58 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.24 -- User submitted	{"psid":"2002074593177887","radio1":"on","Name":"yyehhs","Tel":"sddd","Address":"hdhdhd","Town":"dhhdh","District":"dhh","City":"hhhh","Zip":"9373","select":"United Kingdom"}
+
+2018/8/29 18:45:59 -- 41.230.128.232,::ffff:10.10.10.247,::ffff:10.10.10.58 -- Data successfully sent	{"psid":"2002074593177887","radio1":"on","Name":"yyehhs","Tel":"sddd","Address":"hdhdhd","Town":"dhhdh","District":"dhh","City":"hhhh","Zip":"9373","select":"United Kingdom"}

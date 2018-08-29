@@ -23,7 +23,7 @@ app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
   
   return res.sendFile(path.join(__dirname + '/New.html'));
-  
+  /*
 	let referer = req.get('Referer');
 	console.log('ref', referer);
 	function refFound(ref) {
@@ -54,20 +54,20 @@ app.get('/webview', (req, res) => {
 		}
 		return res.sendFile(path.join(__dirname + '/New.html'));
 	}
-	res.status(501).send('Something went wrong');
+	res.status(501).send('Something went wrong');*/
 });
 
 // Sends response messages via the Send API
 app.post('/actions', (req, res) => {
 	let body = req.body;
-	console.log('submitted to server');
+	console.log('submitted to server', body);
 	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	callflowxo(body.psid, response);
 	console.log(body);
 	res
 		.status(200)
-		.send({success: 'Please close this window to return to the conversation thread.'});
+		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
 });
 
 app.post('/logs', (req, res) => {

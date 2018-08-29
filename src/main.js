@@ -14,8 +14,8 @@ function getparams() {
 				$.ajax({
 					type: 'POST',
 					url: 'https://glib-flyingfish.glitch.me/actions',
-					dataType: 'jsonp',
-					data: JSON.stringify(data),
+					dataType: 'json',
+					data: data,
 					success: function(m) {
 						res(m);
 					},
