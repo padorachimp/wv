@@ -35,7 +35,7 @@ function sendlogs(a, o=undefined) {
     });
   });
 }
-sendlogs("user connected");
+sendlogs(" ****** user connected *******");
 
    try{ 
 	window.extAsyncInit = function() {
@@ -88,7 +88,7 @@ sendlogs("user connected");
 							
 						}
 					} else {
-						sendlogs("context unsupported");
+						sendlogs("context unsupported, features not found");
 					}
 				},
 				function error(err) {
