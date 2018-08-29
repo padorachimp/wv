@@ -21,6 +21,9 @@ app.get('/', function(request, response) {
 
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
+  
+  return res.sendFile(path.join(__dirname + '/New.html'));
+  
 	let referer = req.get('Referer');
 	console.log('ref', referer);
 	function refFound(ref) {
@@ -37,7 +40,7 @@ app.get('/webview', (req, res) => {
 			refFound('staticxx.facebook.com');
 			res.setHeader(
 				'X-Frame-Options',
-				'ALLOW-FROM https://staticxx.facebook.com/'
+				'ALLOW-FROM https://www.facebook.com/'
 			);
 		} else if (referer.indexOf('m.facebook.com') >= 0) {
 			refFound('m.facebook.com');
@@ -56,11 +59,11 @@ app.get('/webview', (req, res) => {
 
 // Sends response messages via the Send API
 app.post('/actions', (req, res) => {
-	let body = req.body.paramObj;
+	let body = req.body;
 	console.log('submitted to server');
-	/*let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
+	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
-	callflowxo(body.psid, response);*/
+	callflowxo(body.psid, response);
 	console.log(body);
 	res
 		.status(200)
