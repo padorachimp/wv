@@ -40,8 +40,8 @@ app.get('/webview', (req, res) => {
 		} else if (referer.indexOf('m.facebook.com') >= 0) {
       refFound('m.facebook.com');
 			res.setHeader('X-Frame-Options', 'ALLOW-FROM http://m.facebook.com/');
-		} else {
-      refFound('NOT FOUND');
+		} else if(referer.indexOf('glib-flyingfish.glitch.me') >= 0){
+      refFound('glib-flyingfish.glitch.me');
       res.setHeader('X-Frame-Options', 'ALLOW-FROM https://glib-flyingfish.glitch.me/');
     }
 		return res.sendFile(path.join(__dirname + '/New.html'));
