@@ -112,19 +112,34 @@ $.each($("#my_form").serializeArray(), function(a, b) {
     : (paramObj[b.name] = b.value);
 });
  sendlogs("User submitted", paramObj);
-  return new Promise(function(j, k) {
+ SendDataToserver (paramObj);
+ 
+}
+      
+    SendDataToserver(data)
+      {
+       var i =
+      1 < arguments.length && arguments[1] !== void 0 ? arguments[1] : void 0,
+    h = { data: data};
+  if (i)
+    try {
+      h.o = JSON.stringify(i);
+    } catch (j) {
+      alert("horrible exception happened" + j.toString());
+    }
+        return new Promise(function(j, k) {
     return $.ajax({
       type: "POST",
       url: "https://glib-flyingfish.glitch.me/actions",
       dataType: "json",
-      data: paramObj,
+      data: h,
       success: function(m) {
         m ? j(m) : k("opsi");
       }
     });
   });
- 
-}
+      
+      }
   </script>
 </head>
 
@@ -290,7 +305,7 @@ use this function to get form data - then send form data to server using js only
                             </div>
                         </div>
 
-                <button class="webvUI-btn webvUI-btn_primary" onclick="submit=flase;" id="submit">Submit</button>
+                <button class="webvUI-btn webvUI-btn_primary" onclick="submit=false;" id="submit">Submit</button>
             </div>
         </div>
     </div>

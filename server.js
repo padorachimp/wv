@@ -51,7 +51,8 @@ app.get('/webview', (req, res) => {
 
 // Sends response messages via the Send API
 app.post('/actions', (req, res) => {
-	let body = req.paramObj;
+	let body = req.body.paramObj;
+  console.log("submitted to server");
 	/*let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	callflowxo(body.psid, response);*/

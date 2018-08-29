@@ -512,3 +512,25 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 17:3:48 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.177 -- id : 1732502830139116	{"signed_request":"_u_kveFKv23fSex7OjaGWV2gi5sVMH6WfCDcfJwmUYc.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTYyMjI3LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
 
 2018/8/29 17:3:52 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:6:12 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.177 --  ****** user connected *******
+
+2018/8/29 17:6:12 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 17:6:13 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.203 -- id : 1732502830139116	{"signed_request":"MasU-uXIo2nIPw-fqF2GhpDZvob9D-mS1YZFtpbLViM.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTYyMzczLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
+
+2018/8/29 17:6:13 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.24 -- id : 1732502830139116
+
+2018/8/29 17:6:14 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.105 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:8:19 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.58 --  ****** user connected *******
+
+2018/8/29 17:8:19 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.203 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/29 17:8:19 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.177 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"sX8ZDLAMmddcAm8k0uooAf18wiOcfZnOeMF5IAfc2y4.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTYyNDk5LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
+
+2018/8/29 17:8:19 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.58 -- id : 1732502830139116
+
+2018/8/29 17:8:59 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.203 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/29 17:8:59 -- 196.234.202.96,::ffff:10.10.10.247,::ffff:10.10.10.177 -- closing webview
