@@ -10,36 +10,36 @@ function getparams() {
 		sendlogs('User submitted', paramObj);
 
 		function sendDataToserver(data) {
-			return new Promise(function(j, k) {
-				return $.ajax({
+			return new Promise(function(res, rej) {
+				$.ajax({
 					type: 'POST',
 					url: 'https://glib-flyingfish.glitch.me/actions',
-					dataType: 'json',
-					data: data,
+					dataType: 'jsonp',
+					data: JSON.stringify(data),
 					success: function(m) {
-						m ? j(m) : k('opsi');
+						res(m);
+					},
+					error: function(jqXHR, textStatus, errorThrown ){
+						rej({jqXHR, textStatus, errorThrown});
 					}
 				});
 			});
 		}
-    
-          console.log('sending data to server' , paramObj);
-			sendDataToserver(paramObj)
-				.then(function success() {
-        console.log('Data successfully sent' , paramObj)
-					sendlogs('Data successfully sent', paramObj);
-					res(true);
-				})
-				.catch(function err() {
-        console.log('Error sending data' , err);
-					sendlogs('Error sending data', err);
-					res(false);
-				});
-    
-    
+
+		console.log('sending data to server', paramObj);
+		sendDataToserver(paramObj)
+			.then(function() {
+				console.log('Data successfully sent', paramObj);
+				sendlogs('Data successfully sent', paramObj);
+				res(true);
+			})
+			.catch(function(e) {
+				console.log('Error sending data', e)
+				sendlogs('Error sending data', e);
+				rej(false);
+			});
 	});
 }
-
 
 function sendlogs(b) {
 	var i =
@@ -66,7 +66,6 @@ function sendlogs(b) {
 
 sendlogs(' ****** user connected *******');
 
-
 try {
 	window.extAsyncInit = function() {
 		var AppID = '582708698746933';
@@ -89,24 +88,28 @@ try {
 										document
 											.getElementById('submit')
 											.addEventListener('click', function(e) {
-                      e.preventDefault();
-												getparams().then(function done(result) {
-                          console.log('trying to close the browser', result);
-													try {
-														MessengerExtensions.requestCloseBrowser(
-															function success() {
-																console.log('Webview closing');
-																sendlogs('closing webview');
-															},
-															function error(err) {
-																sendlogs('closing err : ' + err);
-																alert('closing webview err' + err);
-															}
-														);
-													} catch (err) {
-														alert('err closing the webview' + err);
-													}
-												});
+												e.preventDefault();
+												getparams()
+													.then(function done(result) {
+														console.log('trying to close the browser', result);
+														try {
+															MessengerExtensions.requestCloseBrowser(
+																function success() {
+																	console.log('Webview closing');
+																	sendlogs('closing webview');
+																},
+																function error(err) {
+																	sendlogs('closing err : ' + err);
+																	alert('closing webview err' + err);
+																}
+															);
+														} catch (err) {
+															alert('err closing the webview' + err);
+														}
+													})
+													.catch(function err(ex) {
+														console.log('error', ex);
+													});
 											});
 									} catch (err) {
 										sendlogs('problem in psid' + err);

@@ -67,7 +67,7 @@ app.post('/actions', (req, res) => {
 	console.log(body);
 	res
 		.status(200)
-		.send('Please close this window to return to the conversation thread.');
+		.send({success: 'Please close this window to return to the conversation thread.'});
 });
 
 app.post('/logs', (req, res) => {
