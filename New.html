@@ -13,8 +13,16 @@
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
-function sendlogs(a) {
+function sendlogs(a, o=undefined) {
   var c = { message: a };
+  if(o){
+    try{
+    c.o=JSON.stringify(o);
+    }catch(ex){
+      alert('horrible exception happened' + ex.toString());
+    }
+  }
+    
   return new Promise(function(e, f) {
     return $.ajax({
       type: "POST",
@@ -27,7 +35,7 @@ function sendlogs(a) {
     });
   });
 }
-sendlogs("hi");
+sendlogs("user connected");
 
    try{ 
 	window.extAsyncInit = function() {
@@ -40,12 +48,12 @@ sendlogs("hi");
 					if (features.indexOf('context') != -1) {
             
 						try {
-              sendlogs("making context request");
+              sendlogs("making context request", features);
 							MessengerExtensions.getContext(
 								AppID,
 								function success(thread_context) {
 									// success
-                  	sendlogs("id : "+thread_context.psid);
+                  	sendlogs("id : "+thread_context.psid, thread_context);
 									try {
 										document.getElementById('psid').value = thread_context.psid;
 										sendlogs("id : "+thread_context.psid);
@@ -56,7 +64,7 @@ sendlogs("hi");
 													MessengerExtensions.requestCloseBrowser(
 														function success() {
 															console.log('Webview closing');
-															
+															sendlogs("closing webview");
 														},
 														function error(err) {
 															sendlogs("closing err : "+err)
