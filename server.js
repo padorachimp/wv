@@ -46,9 +46,17 @@ app.get('/actions', (req, res) => {
 app.post("/logs",(req, res) => {
    console.log('a new re"quest made for logs');
  let message = req.body.message;
+  let o = req.body.o;
+  if(o){
+   message = message + '\t' + o; 
+  }
+  
   console.log("***log "+message);
+  var m = new Date();
+var dateString = m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+ m.getUTCDate() + " " + m.getUTCHours() + ":" + m.getUTCMinutes() + ":" + m.getUTCSeconds();
+  message = '\n' + dateString + ' -- ' + message;
   var fs = require('fs');
-fs.appendFile('../app/log.txt', message, function(err) {
+fs.appendFile(__dirname+'/log.txt', message, function(err) {
     if(err) {
         return console.log(err);
     }
