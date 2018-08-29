@@ -126,6 +126,18 @@ sendlogs(" ****** user connected *******");
 }(document, 'script', 'Messenger'));
    </script>
   
+  <!--
+use this function to get form data - then send form data to server using js only
+                      var paramObj = {};
+                      $.each($('#my_form').serializeArray(), function(_, kv) {
+                        if (paramObj.hasOwnProperty(kv.name)) {
+                          paramObj[kv.name] = $.makeArray(paramObj[kv.name]);
+                          paramObj[kv.name].push(kv.value);
+                        }
+                        else {
+                          paramObj[kv.name] = kv.value;
+                        }
+                      });
   <form id ="my_form" method="get" action="/actions" >
      <input type="hidden" name="psid" id="psid" />
    
@@ -270,7 +282,7 @@ sendlogs(" ****** user connected *******");
                             </div>
                         </div>
 
-                <button class="webvUI-btn webvUI-btn_primary" id="submit">Submit</button>
+                <button class="webvUI-btn webvUI-btn_primary" onclick="return false;" id="submit">Submit</button>
             </div>
         </div>
     </div>
