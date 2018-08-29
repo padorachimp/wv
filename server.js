@@ -64,14 +64,14 @@ app.get('/actions', (req, res) => {
 });
 
 app.post('/logs', (req, res) => {
-	console.log('a new re"quest made for logs');
+	console.log('Logging...');
 	let message = req.body.message;
 	let o = req.body.o;
 	if (o) {
 		message = message + '\t' + o;
 	}
 
-	console.log('***log ' + message);
+	console.log('***Log: ' + message);
 	var m = new Date();
 	var dateString =
 		m.getUTCFullYear() +
