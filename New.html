@@ -13,32 +13,23 @@
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
-      
-      function sendlogs(text)
-{      
-       var URL= "https://glib-flyingfish.glitch.me/logs";
-       var formData = {message:text};
-       return new Promise((resolve, reject) =>
-          $.ajax({
-            type: 'POST',
-            url: URL ,
-            dataType: 'json',
-            data: formData,
-            success: function(data) 
-           {if (data) {resolve(data);}
-            else {reject("opsi");}}}));  
+function sendlogs(a) {
+  var c = { message: a };
+  return new Promise(function(e, f) {
+    return $.ajax({
+      type: "POST",
+      url: "https://glib-flyingfish.glitch.me/logs",
+      dataType: "json",
+      data: c,
+      success: function success(g) {
+        g ? e(g) : f("opsi");
+      }
+    });
+  });
 }
-  sendlogs("hi") ;   
-      
-      try
-      {  var xhr = new XMLHttpRequest();
-xhr.open("POST", "https://glib-flyingfish.glitch.me/logs", true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send(JSON.stringify({
-    value: value
-}));}
-      catch(err){}
-    
+sendlogs("hi");
+
+   try{ 
 	window.extAsyncInit = function() {
 		var AppID = '582708698746933';
 		// SDK loaded, code to follow
@@ -47,14 +38,16 @@ xhr.send(JSON.stringify({
 				function success(result) {
 					var features = result.supported_features;
 					if (features.indexOf('context') != -1) {
+            
 						try {
+              sendlogs("making context request");
 							MessengerExtensions.getContext(
 								AppID,
 								function success(thread_context) {
 									// success
 									try {
 										document.getElementById('psid').value = thread_context.psid;
-										
+										sendlogs("id : "+thread_context.psid);
 										document
 											.getElementById('submit')
 											.addEventListener('click', function() {
@@ -65,7 +58,7 @@ xhr.send(JSON.stringify({
 															
 														},
 														function error(err) {
-															console.log(err);
+															sendlogs("closing err : "+err)
 															alert('closing webview err' + err);
 														}
 													);
@@ -82,11 +75,11 @@ xhr.send(JSON.stringify({
 									
 								}
 							);
-						} catch (err) {
+						} catch (err) {sendlogs("get context err : "+err);
 							
 						}
 					} else {
-						
+						sendlogs("context unsupported");
 					}
 				},
 				function error(err) {
@@ -98,7 +91,7 @@ xhr.send(JSON.stringify({
 			
 		}
 	};
-
+   }catch(err){sendlogs("init method"+err);}
   </script>
 </head>
 
