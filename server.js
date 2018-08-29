@@ -43,6 +43,12 @@ app.get('/actions', (req, res) => {
   res.status(200).send('Please close this window to return to the conversation thread.');
 });
 
+app.post("/logs",(req, res) => {
+ let body = req.query;
+  console.log(body);
+
+
+})
 
 function callflowxo(sender_psid, response) {
     // Construct the message body

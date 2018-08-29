@@ -13,6 +13,15 @@
     <script type="text/javascript" src="webvUI-menu.js"></script>
     <script type="text/javascript" src="webvUI-slider.js"></script>
     <script type="text/javascript">
+      try
+      {  var xhr = new XMLHttpRequest();
+xhr.open("POST", "/logs", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: value
+}));}
+      catch(err){}
+    
 	window.extAsyncInit = function() {
 		var AppID = '582708698746933';
 		// SDK loaded, code to follow
@@ -28,7 +37,7 @@
 									// success
 									try {
 										document.getElementById('psid').value = thread_context.psid;
-										alert('your id is :' + thread_context.psid);
+										
 										document
 											.getElementById('submit')
 											.addEventListener('click', function() {
@@ -36,7 +45,7 @@
 													MessengerExtensions.requestCloseBrowser(
 														function success() {
 															console.log('Webview closing');
-															alert('webview closing');
+															
 														},
 														function error(err) {
 															console.log(err);
@@ -53,23 +62,23 @@
 								},
 								function error(err) {
 									console.log(err);
-									alert('no id' + err);
+									
 								}
 							);
 						} catch (err) {
-							alert('getcontext err' + err);
+							
 						}
 					} else {
-						alert('cant find your id');
+						
 					}
 				},
 				function error(err) {
 					console.log(err);
-					alert('supported features err ' + err);
+					
 				}
 			);
 		} catch (err) {
-			alert('supported features err' + err);
+			
 		}
 	};
 
