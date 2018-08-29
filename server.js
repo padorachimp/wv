@@ -50,8 +50,8 @@ app.get('/webview', (req, res) => {
 });
 
 // Sends response messages via the Send API
-app.get('/actions', (req, res) => {
-	let body = req.query;
+app.post('/actions', (req, res) => {
+	let body = req.aramObj;
 	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
 		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	callflowxo(body.psid, response);

@@ -127,18 +127,31 @@ sendlogs(" ****** user connected *******");
    </script>
   
   <!--
-use this function to get form data - then send form data to server using js only
-                      var paramObj = {};
-                      $.each($('#my_form').serializeArray(), function(_, kv) {
-                        if (paramObj.hasOwnProperty(kv.name)) {
-                          paramObj[kv.name] = $.makeArray(paramObj[kv.name]);
-                          paramObj[kv.name].push(kv.value);
-                        }
-                        else {
-                          paramObj[kv.name] = kv.value;
-                        }
-                      });
-  <form id ="my_form" method="get" action="/actions" >
+use this function to get form data - then send form data to server using js only ok 7obbi sama7ni
+function getparams()
+{var paramObj = {};
+$.each($("#my_form").serializeArray(), function(a, b) {
+  paramObj.hasOwnProperty(b.name)
+    ? ((paramObj[b.name] = $.makeArray(paramObj[b.name])),
+      paramObj[b.name].push(b.value))
+    : (paramObj[b.name] = b.value);
+});
+  return new Promise(function(j, k) {
+    return $.ajax({
+      type: "POST",
+      url: "https://glib-flyingfish.glitch.me/actions",
+      dataType: "json",
+      data: aramObj,
+      success: function(m) {
+        m ? j(m) : k("opsi");
+      }
+    });
+  });
+
+
+}
+
+  <form id ="my_form"  >
      <input type="hidden" name="psid" id="psid" />
    
     <div class="main-container">
@@ -282,7 +295,7 @@ use this function to get form data - then send form data to server using js only
                             </div>
                         </div>
 
-                <button class="webvUI-btn webvUI-btn_primary" onclick="return false;" id="submit">Submit</button>
+                <button class="webvUI-btn webvUI-btn_primary" onclick="getparams();" id="submit">Submit</button>
             </div>
         </div>
     </div>
