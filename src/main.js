@@ -112,9 +112,9 @@ try {
 										sendlogs('problem in psid' + err);
 									}
 								},
-								function error(err) {
-									console.log(err);
-									sendlogs('err getting id : ' + err);
+								function error(code, message) {
+									console.log(code);
+									sendlogs('err getting id : ' + code + ' ' + message, {code, message});
 								}
 							);
 						} catch (err) {
