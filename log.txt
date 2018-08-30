@@ -936,3 +936,47 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/29 21:52:27 -- 196.234.202.96,::ffff:10.10.11.196,::ffff:10.10.10.203 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"louka","Tel":"37351","Address":"shdvd","Town":"zbzbsb","District":"vzvz","City":"zbbzbz","Zip":"2903","select":"United States"}
 
 2018/8/29 21:52:27 -- 196.234.202.96,::ffff:10.10.11.196,::ffff:10.10.10.203 -- Data successfully sent	{"psid":"1732502830139116","radio1":"on","Name":"louka","Tel":"37351","Address":"shdvd","Town":"zbzbsb","District":"vzvz","City":"zbbzbz","Zip":"2903","select":"United States"}
+
+2018/8/30 2:46:12 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.231 --  ****** user connected *******
+
+2018/8/30 2:46:12 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.57 -- making context request	["sharing_broadcast","sharing_direct","sharing_open_graph","permissions","context","sharing_media_template"]
+
+2018/8/30 2:46:12 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.254 -- err getting id : 1675012
+
+2018/8/30 2:46:41 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.254 --  ****** user connected *******
+
+2018/8/30 2:46:41 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.31 -- making context request	["sharing_broadcast","sharing_direct","sharing_open_graph","permissions","context","sharing_media_template"]
+
+2018/8/30 2:46:41 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.231 -- err getting id : 1675012
+
+2018/8/30 2:47:36 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.254 --  ****** user connected *******
+
+2018/8/30 2:47:37 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.254 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/30 2:47:37 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.31 -- id : 1781327128609654	{"tid":"1781327128609654","thread_type":"USER_TO_PAGE","psid":"1781327128609654","signed_request":"4eU3QxcWpCrS4Jh8Zg8u6zujsG5syvDWz23D3hDYCDU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NTk3MjU3LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTc4MTMyNzEyODYwOTY1NCIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTc4MTMyNzEyODYwOTY1NCJ9","metadata":null}
+
+2018/8/30 2:47:37 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.182 -- id : 1781327128609654
+
+2018/8/30 2:47:41 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.57 -- User submitted	{"psid":"1781327128609654","radio1":"on","Name":"","Tel":"","Address":",n,m","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/30 2:47:42 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.182 -- Data successfully sent	{"psid":"1781327128609654","radio1":"on","Name":"","Tel":"","Address":",n,m","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/30 2:47:42 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.57 -- closing webview
+
+2018/8/30 2:48:28 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.254 --  ****** user connected *******
+
+2018/8/30 2:48:28 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.31 -- making context request	["sharing_broadcast","sharing_direct","sharing_open_graph","permissions","context","sharing_media_template"]
+
+2018/8/30 2:48:28 -- 1.47.138.144,::ffff:10.10.11.196,::ffff:10.10.10.57 -- err getting id : 1675012
+
+2018/8/30 2:50:31 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.57 --  ****** user connected *******
+
+2018/8/30 2:50:31 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.231 -- making context request	["sharing_broadcast","sharing_direct","sharing_open_graph","permissions","context","sharing_media_template"]
+
+2018/8/30 2:50:31 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.254 -- err getting id : 1675012
+
+2018/8/30 2:50:35 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.57 --  ****** user connected *******
+
+2018/8/30 2:50:35 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.231 -- making context request	["sharing_broadcast","sharing_direct","sharing_open_graph","permissions","context","sharing_media_template"]
+
+2018/8/30 2:50:36 -- 1.47.138.144,::ffff:10.10.10.247,::ffff:10.10.10.254 -- err getting id : 1675012
