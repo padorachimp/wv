@@ -988,3 +988,17 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/8/30 9:18:41 -- 102.156.109.34,::ffff:10.10.11.196,::ffff:10.10.10.182 -- id : 2002074593177887	{"signed_request":"t35Kwb5QUnZxBA8KrtkzL7g5muKyCFfCbC07Z4o2rPI.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NjIwNzIxLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMjAwMjA3NDU5MzE3Nzg4NyIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMjAwMjA3NDU5MzE3Nzg4NyJ9","tid":"2002074593177887","psid":"2002074593177887","thread_type":"USER_TO_PAGE"}
 
 2018/8/30 9:18:41 -- 102.156.109.34,::ffff:10.10.11.196,::ffff:10.10.10.57 -- id : 2002074593177887
+
+2018/8/31 15:50:22 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.182 --  ****** user connected *******
+
+2018/8/31 15:50:23 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.182 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/8/31 15:50:24 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.31 -- id : 1781327128609654	{"tid":"1781327128609654","thread_type":"USER_TO_PAGE","psid":"1781327128609654","signed_request":"UVHLZPibl08hlWIW3wgpSlZExV5GCECEKFiwGJ4EyFY.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1NzMwNjIzLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTc4MTMyNzEyODYwOTY1NCIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTc4MTMyNzEyODYwOTY1NCJ9","metadata":null}
+
+2018/8/31 15:50:24 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.57 -- id : 1781327128609654
+
+2018/8/31 15:51:40 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.57 -- User submitted	{"psid":"1781327128609654","radio1":"on","Name":"asdf","Tel":"","Address":"","Town":"asdf","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/31 15:51:40 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.182 -- Data successfully sent	{"psid":"1781327128609654","radio1":"on","Name":"asdf","Tel":"","Address":"","Town":"asdf","District":"","City":"","Zip":"","select":"China"}
+
+2018/8/31 15:51:40 -- 183.88.159.41,::ffff:10.10.10.247,::ffff:10.10.10.57 -- closing webview
