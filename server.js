@@ -16,8 +16,6 @@ app.use(nocache());
 
 
 app.get('/', function(request, response) {
-  console.log("hi");
-	return response.sendFile(path.join(__dirname + 'Views/welcome.html'));
 });
 
 
