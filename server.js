@@ -21,40 +21,7 @@ app.get('/', function(request, response) {
 
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
-  
   return res.sendFile(path.join(__dirname + '/New.html'));
-  /*
-	let referer = req.get('Referer');
-	console.log('ref', referer);
-	function refFound(ref) {
-		console.log('ref found', ref);
-	}
-	if (referer) {
-		if (referer.indexOf('www.messenger.com') >= 0) {
-			refFound('www.messenger.com');
-			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.messenger.com/');
-		} else if (referer.indexOf('www.facebook.com') >= 0) {
-			refFound('www.facebook.com');
-			res.setHeader('X-Frame-Options', 'ALLOW-FROM https://www.facebook.com/');
-		} else if (referer.indexOf('staticxx.facebook.com') >= 0) {
-			refFound('staticxx.facebook.com');
-			res.setHeader(
-				'X-Frame-Options',
-				'ALLOW-FROM https://www.facebook.com/'
-			);
-		} else if (referer.indexOf('m.facebook.com') >= 0) {
-			refFound('m.facebook.com');
-			res.setHeader('X-Frame-Options', 'ALLOW-FROM http://m.facebook.com/');
-		} else if (referer.indexOf('glib-flyingfish.glitch.me') >= 0) {
-			refFound('glib-flyingfish.glitch.me');
-			res.setHeader(
-				'X-Frame-Options',
-				'ALLOW-FROM https://glib-flyingfish.glitch.me/'
-			);
-		}
-		return res.sendFile(path.join(__dirname + '/New.html'));
-	}
-	res.status(501).send('Something went wrong');*/
 });
 
 // Sends response messages via the Send API
