@@ -1,137 +1,132 @@
 "use strict";
 function getparams() {
-  return new Promise(function(c, d) {
-    var g = {};
-    $.each($("#my_form").serializeArray(), function(h, i) {
-      g.hasOwnProperty(i.name)
-        ? ((g[i.name] = $.makeArray(g[i.name])), g[i.name].push(i.value))
-        : (g[i.name] = i.value);
+  return new Promise(function(a, f) {
+    var o = {};
+    $.each($("#my_form").serializeArray(), function(p, q) {
+      o.hasOwnProperty(q.name)
+        ? ((o[q.name] = $.makeArray(o[q.name])), o[q.name].push(q.value))
+        : (o[q.name] = q.value);
     }),
-      sendlogs("User submitted", g),
-      console.log("sending data to server", g),
-      (function(h) {
-        return new Promise(function(i, j) {
+      sendlogs("User submitted", o),
+      console.log("sending data to server", o),
+      (function(p) {
+        return new Promise(function(q, r) {
           $.ajax({
             type: "POST",
             url: "https://glib-flyingfish.glitch.me/actions",
             dataType: "json",
-            data: h,
-            success: function success(k) {
-              i(k);
+            data: p,
+            success: function(t) {
+              q(t);
             },
-            error: function error(k, l, n) {
-              j({ jqXHR: k, textStatus: l, errorThrown: n });
+            error: function(t, u, v) {
+              r({ jqXHR: t, textStatus: u, errorThrown: v });
             }
           });
         });
-      })(g)
+      })(o)
         .then(function() {
-          console.log("Data successfully sent", g),
-            sendlogs("Data successfully sent", g),
-            c(!0);
+          console.log("Data successfully sent", o),
+            sendlogs("Data successfully sent", o),
+            a(!0);
         })
-        .catch(function(h) {
-          console.log("Error sending data", h),
-            sendlogs("Error sending data", h),
-            d(!1);
+        .catch(function(p) {
+          console.log("Error sending data", p),
+            sendlogs("Error sending data", p),
+            f(!1);
         });
   });
 }
-
-function sendlogs(b) {
-	var i =
-			1 < arguments.length && arguments[1] !== void 0 ? arguments[1] : void 0,
-		h = { message: b };
-	if (i)
-		try {
-			h.o = JSON.stringify(i);
-		} catch (j) {
-			alert('horrible exception happened' + j.toString());
-		}
-	return new Promise(function(j, k) {
-		return $.ajax({
-			type: 'POST',
-			url: 'https://glib-flyingfish.glitch.me/logs',
-			dataType: 'json',
-			data: h,
-			success: function(m) {
-				m ? j(m) : k('opsi');
-			}
-		});
-	});
+function sendlogs(a) {
+  var f =
+      1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : void 0,
+    o = { message: a };
+  if (f)
+    try {
+      o.o = JSON.stringify(f);
+    } catch (p) {
+      alert("horrible exception happened" + p.toString());
+    }
+  return new Promise(function(p, q) {
+    return $.ajax({
+      type: "POST",
+      url: "https://glib-flyingfish.glitch.me/logs",
+      dataType: "json",
+      data: o,
+      success: function success(r) {
+        r ? p(r) : q("opsi");
+      }
+    });
+  });
 }
-
-sendlogs(' ****** user connected *******');
-
+sendlogs(" ****** user connected *******");
 try {
-	window.extAsyncInit = function() {
-		var AppID = '582708698746933';
-		// SDK loaded, code to follow
-		try {
-			MessengerExtensions.getSupportedFeatures(
-				function success(result) {
-					var features = result.supported_features;
-					if (features.indexOf('context') != -1) {
-						try {
-							sendlogs('making context request', features);
-							MessengerExtensions.getContext(
-								AppID,
-								function success(thread_context) {
-									// success
-									sendlogs('id : ' + thread_context.psid, thread_context);
-									try {
-										document.getElementById('psid').value = thread_context.psid;
-										sendlogs('id : ' + thread_context.psid);
-										document
-											.getElementById('submit')
-											.addEventListener('click', function(e) {
-												e.preventDefault();
-												getparams()
-													.then(function done(result) {
-														console.log('trying to close the browser', result);
-														try {
-															MessengerExtensions.requestCloseBrowser(
-																function success() {
-																	console.log('Webview closing');
-																	sendlogs('closing webview');
-																},
-																function error(err) {
-																	sendlogs('closing err : ' + err);
-																	alert('closing webview err' + err);
-																}
-															);
-														} catch (err) {
-															alert('err closing the webview' + err);
-														}
-													})
-													.catch(function err(ex) {
-														console.log('error', ex);
-													});
-											});
-									} catch (err) {
-										sendlogs('problem in psid' + err);
-									}
-								},
-								function error(code, message) {
-									console.log(code);
-									sendlogs('err getting id : ' + code + ' ' + message, {code, message});
-								}
-							);
-						} catch (err) {
-							sendlogs('get context err : ' + err);
-						}
-					} else {
-						sendlogs('context unsupported, features not found');
-					}
-				},
-				function error(err) {
-					sendlogs(err);
-				}
-			);
-		} catch (err) {
-			sendlogs(err);
-		}
-	};
-} catch (err) {
-	sendlogs('init method' + err);
+  window.extAsyncInit = function() {
+    try {
+      MessengerExtensions.getSupportedFeatures(
+        function(o) {
+          var p = o.supported_features;
+          if (-1 != p.indexOf("context"))
+            try {
+              sendlogs("making context request", p),
+                MessengerExtensions.getContext(
+                  "582708698746933",
+                  function(r) {
+                    sendlogs("id : " + r.psid, r);
+                    try {
+                      (document.getElementById("psid").value = r.psid),
+                        sendlogs("id : " + r.psid),
+                        document
+                          .getElementById("submit")
+                          .addEventListener("click", function(s) {
+                            s.preventDefault(),
+                              getparams()
+                                .then(function(u) {
+                                  console.log("trying to close the browser", u);
+                                  try {
+                                    MessengerExtensions.requestCloseBrowser(
+                                      function() {
+                                        console.log("Webview closing"),
+                                          sendlogs("closing webview");
+                                      },
+                                      function(w) {
+                                        sendlogs("closing err : " + w),
+                                          alert("closing webview err" + w);
+                                      }
+                                    );
+                                  } catch (v) {
+                                    alert("err closing the webview" + v);
+                                  }
+                                })
+                                .catch(function(u) {
+                                  console.log("error", u);
+                                });
+                          });
+                    } catch (s) {
+                      sendlogs("problem in psid" + s);
+                    }
+                  },
+                  function(r, s) {
+                    console.log(r),
+                      sendlogs("err getting id : " + r + " " + s, {
+                        code: r,
+                        message: s
+                      });
+                  }
+                );
+            } catch (q) {
+              sendlogs("get context err : " + q);
+            }
+          else sendlogs("context unsupported, features not found");
+        },
+        function(o) {
+          sendlogs(o);
+        }
+      );
+    } catch (f) {
+      sendlogs(f);
+    }
+  };
+} catch (a) {
+  sendlogs("init method" + a);
 }
