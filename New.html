@@ -19,6 +19,8 @@
 
 <body style="background-color:#fafafa;">
   <script type="text/javascript">
+    //load facebbok messenger Extention
+    
   (function(d, s, id){
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
@@ -26,31 +28,14 @@
   js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
+    
    </script>
   
-  <!--
-use this function to get form data - then send form data to server using js only ok 7obbi sama7ni 
-
- SendDataToserver(data)
-      {
-    return new Promise(function(j, k) {
-    return $.ajax({
-      type: "POST",
-      url: "https://glib-flyingfish.glitch.me/actions",
-      dataType: "json",
-      data: data,
-      success: function(m) {
-        m ? j(m) : k("opsi");
-      }
-    });
-  });
-      
-      }
-!-->
+ 
 
 
 
-}
+
 
   <form id ="my_form"  >
      <input type="hidden" name="psid" id="psid" />

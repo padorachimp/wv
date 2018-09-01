@@ -1,5 +1,7 @@
 "use strict";
 
+// Get parameters from the form and submit it server 
+
 function getparams() {
   return new Promise(function(a, f) {
     var o = {};
@@ -38,6 +40,10 @@ function getparams() {
         });
   });
 }
+
+
+// Send logs to server
+
 function sendlogs(a) {
   var f =
       1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -60,7 +66,11 @@ function sendlogs(a) {
     });
   });
 }
+
 sendlogs(" ****** user connected *******");
+
+// Facebbok Messenger SDK
+
 try {
   window.extAsyncInit = function() {
     try {
