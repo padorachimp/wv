@@ -1,4 +1,6 @@
 "use strict";
+var host = "http://"+window.location.hostname;
+
 function getparams() {
   return new Promise(function(a, f) {
     var o = {};
@@ -13,7 +15,7 @@ function getparams() {
         return new Promise(function(q, r) {
           $.ajax({
             type: "POST",
-            url: "https://glib-flyingfish.glitch.me/actions",
+            url: host+"/actions",
             dataType: "json",
             data: p,
             success: function(t) {
@@ -50,7 +52,7 @@ function sendlogs(a) {
   return new Promise(function(p, q) {
     return $.ajax({
       type: "POST",
-      url: "https://glib-flyingfish.glitch.me/logs",
+      url: host+"logs",
       dataType: "json",
       data: o,
       success: function success(r) {
@@ -62,6 +64,7 @@ function sendlogs(a) {
 sendlogs(" ****** user connected *******");
 try {
   window.extAsyncInit = function() {
+    var AppID =  "582708698746933";
     try {
       MessengerExtensions.getSupportedFeatures(
         function(o) {
@@ -70,7 +73,7 @@ try {
             try {
               sendlogs("making context request", p),
                 MessengerExtensions.getContext(
-                  "582708698746933",
+                 AppID,
                   function(r) {
                     sendlogs("id : " + r.psid, r);
                     try {
