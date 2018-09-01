@@ -14,11 +14,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
 app.use(nocache());
 
+
 app.get('/', function(request, response) {
   console.log("hi");
 	response.sendFile(path.join(__dirname + '/welcome.html'));
 });
 
+
+// trigger the webview
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
   return res.sendFile(path.join(__dirname + '/New.html'));
@@ -37,6 +40,7 @@ app.post('/actions', (req, res) => {
 		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
 });
 
+// receive logs from the webhook 
 app.post('/logs', (req, res) => {
 	console.log('Logging...');
 	var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
@@ -71,6 +75,8 @@ app.post('/logs', (req, res) => {
 	});
 });
 
+
+// flowxo send request 
 function callflowxo(sender_psid, response) {
 
 	// Send the HTTP request to flowxo
