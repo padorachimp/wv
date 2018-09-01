@@ -70,8 +70,9 @@ function sendlogs(a) {
 sendlogs(" ****** user connected *******");
 
 // Facebbok Messenger SDK
-
+var AppID= "582708698746933";
 try {
+  
   window.extAsyncInit = function() {
     try {
       MessengerExtensions.getSupportedFeatures(
@@ -79,9 +80,10 @@ try {
           var p = o.supported_features;
           if (-1 != p.indexOf("context"))
             try {
+            
               sendlogs("making context request", p),
                 MessengerExtensions.getContext(
-                  "582708698746933",
+                  AppID,
                   function(r) {
                     sendlogs("id : " + r.psid, r);
                     try {
