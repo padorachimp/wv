@@ -1,6 +1,5 @@
 "use strict";
-var host = "https://"+window.location.hostname;
-sendlogs(host);
+
 function getparams() {
   return new Promise(function(a, f) {
     var o = {};
@@ -15,7 +14,7 @@ function getparams() {
         return new Promise(function(q, r) {
           $.ajax({
             type: "POST",
-            url: host+"/actions",
+            url: "https://"+window.location.hostname+"/actions",
             dataType: "json",
             data: p,
             success: function(t) {
@@ -52,7 +51,7 @@ function sendlogs(a) {
   return new Promise(function(p, q) {
     return $.ajax({
       type: "POST",
-      url: host+"/logs",
+      url: "https://"+window.location.hostname+"/logs",
       dataType: "json",
       data: o,
       success: function success(r) {
