@@ -17,7 +17,7 @@ app.use(nocache());
 
 app.get('/', function(request, response) {
   console.log("hi");
-	response.sendFile(path.join(__dirname + '/welcome.html'));
+	return response.sendFile(path.join(__dirname + '/welcome.html'));
 });
 
 
@@ -31,8 +31,7 @@ app.get('/webview', (req, res) => {
 app.post('/actions', (req, res) => {
 	let body = req.body;
 	console.log('submitted to server', body);
-	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${
-		body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
+	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	callflowxo(body.psid, response);
 	console.log(body);
 	res
