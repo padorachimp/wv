@@ -1042,3 +1042,73 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/9/1 13:34:13 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.31 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
 
 2018/9/1 13:34:13 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.57 -- Data successfully sent	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/1 13:52:4 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- http://glib-flyingfish.glitch.me
+
+2018/9/1 13:52:4 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 --  ****** user connected *******
+
+2018/9/1 13:52:4 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:52:4 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"4kG0uWE0LWTWp97pDr5hYVEwpByrtgS2-hLbsxRLntk.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODA5OTI0LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
+
+2018/9/1 13:52:4 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- id : 1732502830139116
+
+2018/9/1 13:53:21 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.182 -- https://glib-flyingfish.glitch.me
+
+2018/9/1 13:53:21 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 --  ****** user connected *******
+
+2018/9/1 13:53:21 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:53:23 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"y2pGY4qhtQBGdDkETKrRJDPAmecS69GbVSyQ2pKtGqU.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODEwMDAxLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
+
+2018/9/1 13:53:23 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- id : 1732502830139116
+
+2018/9/1 13:53:42 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- https://glib-flyingfish.glitch.me
+
+2018/9/1 13:53:42 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 --  ****** user connected *******
+
+2018/9/1 13:53:42 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:53:42 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- id : 1732502830139116	{"signed_request":"jVXQGF-wmaLApLXgHj_-_6zyMP2s6IKFJVrJdhXZ03U.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODEwMDIyLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
+
+2018/9/1 13:53:42 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.182 -- id : 1732502830139116
+
+2018/9/1 13:53:50 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/1 13:54:20 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- https://glib-flyingfish.glitch.me
+
+2018/9/1 13:54:20 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.182 --  ****** user connected *******
+
+2018/9/1 13:54:20 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:54:21 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"lkkhMa8V_-8mCwzJP3_ePFeIK7u4L9lAx9yHgdEqHDs.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODEwMDYwLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
+
+2018/9/1 13:54:21 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- id : 1732502830139116
+
+2018/9/1 13:54:22 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/1 13:54:22 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- Data successfully sent	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/1 13:54:22 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- closing webview
+
+2018/9/1 13:54:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- https://glib-flyingfish.glitch.me
+
+2018/9/1 13:54:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 --  ****** user connected *******
+
+2018/9/1 13:54:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:54:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- id : 1732502830139116	{"signed_request":"bMW2ncSak_Z-ZqIKgdsZWcxkLsOS98HQ3QWF7j-lA1o.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODEwMDc4LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
+
+2018/9/1 13:54:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.182 -- id : 1732502830139116
+
+2018/9/1 13:54:40 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- User submitted	{"psid":"1732502830139116","radio1":"on","Name":"","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/1 13:55:39 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- https://glib-flyingfish.glitch.me
+
+2018/9/1 13:55:39 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 --  ****** user connected *******
+
+2018/9/1 13:55:39 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- making context request	["sharing_broadcast","permissions","context","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/1 13:55:40 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- id : 1732502830139116	{"signed_request":"QXnlwQcAYIr-72kZF8nDgWeNDlMuRamJI-waPa0u_Fg.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODEwMTM5LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","tid":"1732502830139116","psid":"1732502830139116","thread_type":"USER_TO_PAGE"}
+
+2018/9/1 13:55:40 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- id : 1732502830139116

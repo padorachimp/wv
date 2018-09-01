@@ -1,6 +1,6 @@
 "use strict";
-var host = "http://"+window.location.hostname;
-
+var host = "https://"+window.location.hostname;
+sendlogs(host);
 function getparams() {
   return new Promise(function(a, f) {
     var o = {};
@@ -52,7 +52,7 @@ function sendlogs(a) {
   return new Promise(function(p, q) {
     return $.ajax({
       type: "POST",
-      url: host+"logs",
+      url: host+"/logs",
       dataType: "json",
       data: o,
       success: function success(r) {
@@ -64,7 +64,6 @@ function sendlogs(a) {
 sendlogs(" ****** user connected *******");
 try {
   window.extAsyncInit = function() {
-    var AppID =  "582708698746933";
     try {
       MessengerExtensions.getSupportedFeatures(
         function(o) {
@@ -73,7 +72,7 @@ try {
             try {
               sendlogs("making context request", p),
                 MessengerExtensions.getContext(
-                 AppID,
+                  "582708698746933",
                   function(r) {
                     sendlogs("id : " + r.psid, r);
                     try {
