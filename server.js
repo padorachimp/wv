@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const nocache = require('nocache');
-
+const URL = 'https://flowxo.com/hooks/a/6km6a7md'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
@@ -104,14 +104,15 @@ app.post('/logs', (req, res) => {
 	});
 });
 
+
+// send FlowXO webview request
+
 function callflowxo(sender_psid, response) {
-	// Construct the message body
-	let request_body = { recipient: { id: sender_psid }, message: response };
-	console.log(request_body);
+
 	// Send the HTTP request to flowxo
 	request(
 		{
-			uri: 'https://flowxo.com/hooks/a/6km6a7md' + response,
+			uri: URL + response,
 			method: 'GET'
 		},
 		(err, res, body) => {
