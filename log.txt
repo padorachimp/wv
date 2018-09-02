@@ -1226,3 +1226,31 @@ hi2071010hi20710102018/8/29 14:6:8 -- user connected2018/8/29 14:6:8 -- making c
 2018/9/2 13:39:59 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.231 -- id : 1732502830139116	{"tid":"1732502830139116","thread_type":"USER_TO_PAGE","psid":"1732502830139116","signed_request":"02sCgTu7D-e3dmvA8ja84KGhVDgpt6Fhzu7SeGS5ymE.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODk1NTk5LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTkzOTM0NDY0NTI2MTQ2LCJwc2lkIjoiMTczMjUwMjgzMDEzOTExNiIsInRocmVhZF9wYXJ0aWNpcGFudF9pZHMiOm51bGwsInRocmVhZF90eXBlIjoiVVNFUl9UT19QQUdFIiwidGlkIjoiMTczMjUwMjgzMDEzOTExNiJ9","metadata":null}
 
 2018/9/2 13:39:59 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.254 -- id : 1732502830139116
+
+2018/9/2 14:40:24 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 --  ****** user connected *******
+
+2018/9/2 14:40:24 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.182 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/2 14:40:24 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.254 -- id : 1919914458067909	{"tid":"1919914458067909","thread_type":"USER_TO_PAGE","psid":"1919914458067909","signed_request":"Dg52-zMksZmgqd9MKefGmOtO4tcG7KU8zpB3x907Bek.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODk5MjI0LCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTQ0NDA3MjA0MjM4NTI3NCwicHNpZCI6IjE5MTk5MTQ0NTgwNjc5MDkiLCJ0aHJlYWRfcGFydGljaXBhbnRfaWRzIjpudWxsLCJ0aHJlYWRfdHlwZSI6IlVTRVJfVE9fUEFHRSIsInRpZCI6IjE5MTk5MTQ0NTgwNjc5MDkifQ","metadata":null}
+
+2018/9/2 14:40:24 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.31 -- id : 1919914458067909
+
+2018/9/2 14:40:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- User submitted	{"psid":"1919914458067909","radio1":"on","Name":"Malek Tanabene","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/2 14:40:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.57 -- Data successfully sent	{"psid":"1919914458067909","radio1":"on","Name":"Malek Tanabene","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/2 14:40:38 -- 196.229.242.148,::ffff:10.10.11.196,::ffff:10.10.10.231 -- closing webview
+
+2018/9/2 14:42:0 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.31 --  ****** user connected *******
+
+2018/9/2 14:42:0 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.182 -- making context request	["context","sharing_broadcast","sharing_direct","sharing_open_graph","sharing_media_template"]
+
+2018/9/2 14:42:0 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.182 -- id : 1919914458067909	{"tid":"1919914458067909","thread_type":"USER_TO_PAGE","psid":"1919914458067909","signed_request":"9ff78-6Ke4E5rY6OVk-ST9FFL1Mk6uVkgBj6UkEet0Y.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvbW11bml0eV9pZCI6bnVsbCwiaXNzdWVkX2F0IjoxNTM1ODk5MzIwLCJtZXRhZGF0YSI6bnVsbCwicGFnZV9pZCI6MTQ0NDA3MjA0MjM4NTI3NCwicHNpZCI6IjE5MTk5MTQ0NTgwNjc5MDkiLCJ0aHJlYWRfcGFydGljaXBhbnRfaWRzIjpudWxsLCJ0aHJlYWRfdHlwZSI6IlVTRVJfVE9fUEFHRSIsInRpZCI6IjE5MTk5MTQ0NTgwNjc5MDkifQ","metadata":null}
+
+2018/9/2 14:42:0 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.57 -- id : 1919914458067909
+
+2018/9/2 14:42:6 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.231 -- User submitted	{"psid":"1919914458067909","radio1":"on","Name":"louka","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/2 14:42:6 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.57 -- Data successfully sent	{"psid":"1919914458067909","radio1":"on","Name":"louka","Tel":"","Address":"","Town":"","District":"","City":"","Zip":"","select":"China"}
+
+2018/9/2 14:42:6 -- 196.229.242.148,::ffff:10.10.10.247,::ffff:10.10.10.231 -- closing webview
