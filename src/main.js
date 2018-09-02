@@ -70,7 +70,7 @@ function sendlogs(a) {
 sendlogs(" ****** user connected *******");
 
 // Facebbok Messenger SDK
-var AppID= "582708698746933";
+var AppID= "473351503178187";
 try {
   
   window.extAsyncInit = function() {

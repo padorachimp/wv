@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const nocache = require('nocache');
-const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/6km6a7md'
+const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/ydj22ype'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
