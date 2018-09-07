@@ -34,7 +34,7 @@ app.post('/to_chatfuel', (req, res) => {
 
 app.post('/showwebview', (req, res) => {
 	let body = req.body;
-    let response = {
+    let response = {messages:[{
     attachment: {
         type: "template",
         payload: {
@@ -49,7 +49,7 @@ app.post('/showwebview', (req, res) => {
             }]
         }
     }
-};
+}]};
 
 	console.log('submitted to server', body);
 	console.log(body);
