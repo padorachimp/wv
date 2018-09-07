@@ -17,8 +17,28 @@ app.use(nocache());
 
 app.get('/', function(request, response) {
 });
+//
+app.post('/to_chatfuel', (req, res) => {
+	let body = req.body;
+	console.log('submitted to server', body);
+	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
+	callflowxo(body.psid, response);
+	console.log(body);
+	res
+		.status(200)
+		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
+});
 
 
+//showwebview
+
+app.post('/showwebview', (req, res) => {
+	let body = req.body;
+	console.log('submitted to server', body);
+	console.log(body);
+	res
+		.status(200);
+});
 // trigger the webview
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made');
