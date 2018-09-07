@@ -12,7 +12,7 @@ const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/a3375k6x'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
-app.use(nocache());
+
 
 
 app.get('/', function(request, response) {
@@ -59,8 +59,8 @@ app.post('/showwebview', (req, res) => {
 
 });
 // trigger the webview
-app.get('/webview', (req, res) => {
-	console.log('a new re"quest made',req.params);
+app.get('/webview?:id', (req, res) => {
+	console.log('a new re"quest made',req.params, req.body);
   return res.sendFile(path.join(__dirname + '/New.html'));
 });
 
