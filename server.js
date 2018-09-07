@@ -34,10 +34,29 @@ app.post('/to_chatfuel', (req, res) => {
 
 app.post('/showwebview', (req, res) => {
 	let body = req.body;
+    let response = {
+    attachment: {
+        type: "template",
+        payload: {
+            template_type: "button",
+            text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+            buttons: [{
+                type: "web_url",
+                url:  "https://glib-flyingfish.glitch.me/webview",
+                title: "Set preferences",
+                webview_height_ratio: "compact",
+                messenger_extensions: true
+            }]
+        }
+    }
+};
+
 	console.log('submitted to server', body);
 	console.log(body);
-	res
-		.status(200);
+	res.json(response)
+		.status(200)
+  
+
 });
 // trigger the webview
 app.get('/webview', (req, res) => {
