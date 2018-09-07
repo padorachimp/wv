@@ -60,7 +60,7 @@ app.post('/showwebview', (req, res) => {
 });
 // trigger the webview
 app.get('/webview', (req, res) => {
-	console.log('a new re"quest made');
+	console.log('a new re"quest made',req.params);
   return res.sendFile(path.join(__dirname + '/New.html'));
 });
 
