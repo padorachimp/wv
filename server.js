@@ -40,7 +40,7 @@ app.post('/actions', (req, res) => {
 // receive logs from the webhook 
 app.post('/logs', (req, res) => {
 	console.log('Logging...');
-	var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+	/* var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 	let message = req.body.message;
 	let o = req.body.o;
 	if (o) {
@@ -69,7 +69,7 @@ app.post('/logs', (req, res) => {
 		}
 
 		console.log('The file was saved!');
-	});
+	});*/
 });
 
 
