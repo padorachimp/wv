@@ -186,11 +186,11 @@
                                             $.post('/actions',formdata,function(data){
                                               MessengerExtensions.requestCloseBrowser(
                                       function() {
-                                        console.log("Webview closing"),
-                                          sendlogs("closing webview");
+                                        console.log("Webview closing");
+                                          
                                       },
                                       function(w) {
-                                        sendlogs("closing err : " + w),
+                                        
                                           alert("closing webview err" + w);
                                       }
                                     );
