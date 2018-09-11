@@ -10,7 +10,7 @@ const path = require('path');
 const nocache = require('nocache');
 const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/a3375k6x'
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('src'));
 
 

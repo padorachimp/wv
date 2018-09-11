@@ -172,11 +172,18 @@
                             </div>
                         </div>
 
-                <a class="webvUI-btn webvUI-btn_primary" href="#"  id="submit">Submit</a>
+                <button typr="submit" class="webvUI-btn webvUI-btn_primary" href="#"  id="submit">Submit</button>
             </div>
         </div>
     </div>
   </form>
   </body>
-<script> window.extAsyncInit = function() {console.log("ready")}</script>
+<script> window.extAsyncInit = function() {console.log("ready")
+                                          $('#my_form').submit(function(event){
+                                          console.log("submit");
+                                          
+                                          })
+                                          
+                                          }</script>
 </html>
+//https://glib-flyingfish.glitch.me/webview?id=4657
