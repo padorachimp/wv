@@ -1,14 +1,14 @@
 'use strict';
 // server.js
 // where your node app starts
-const PAGE_ACCESS_TOKEN = process.env.FB_ACCESS_TOKEN;
+
 const request = require('request');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const nocache = require('nocache');
-const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/a3375k6x'
+const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/6km6a7md'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('src'));
