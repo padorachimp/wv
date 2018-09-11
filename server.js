@@ -61,7 +61,9 @@ app.post('/showwebview', (req, res) => {
 // trigger the webview
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made', req.query);
-  return res.sendFile(path.join(__dirname + '/Views/welcome.html'));
+  return res.render(path.join(__dirname + '/Views/welcome'),req.query,function(err, html) {
+  
+});
 });
 
 // Sends response messages via the Send API
