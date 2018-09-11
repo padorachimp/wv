@@ -15,7 +15,9 @@
     "request": "^2.88.0",
     "npm-update-all": "^1.0.1",
     "prettier": "^1.14.2",
-    "nocache": "^2.0.0"
+    "nocache": "^2.0.0",
+    "consolidate": "^0.15.1",
+    "mustache": "^2.3.2"
   },
   "engines": {
     "node": "10.x"

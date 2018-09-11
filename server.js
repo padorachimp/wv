@@ -12,8 +12,12 @@ const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/a3375k6x'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('src'));
-app.set('view engine', 'html');
+app.use(express.static(path.join(__dirname, 'public')));
+var engines = require('consolidate');
 
+app.set('views', __dirname + '/views');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
 });
@@ -61,9 +65,7 @@ app.post('/showwebview', (req, res) => {
 // trigger the webview
 app.get('/webview', (req, res) => {
 	console.log('a new re"quest made', req.query);
-  return res.render(__dirname + '/Views/welcome',req.query,function(err, html) {
-  console.log(err,html);
-});
+  return res.render(__dirname + '/Views/welcome.html',req.query);
 });
 
 // Sends response messages via the Send API
