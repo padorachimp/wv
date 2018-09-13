@@ -75,7 +75,7 @@ app.post('/actions', (req, res) => {
 	console.log('submitted to server', body);
 	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
 	//callflowxo(body.psid, response);
-  
+  ToChatfuel(body)
 	console.log(body);
 	res
 		.status(200)
@@ -144,24 +144,28 @@ function ToChatfuel(data) {
   const Token =process.env.Token;
   const BotID= process.env.BotId;
   const {userID,Block}=data;
+  const BroadCastApiUrl=`https://api.chatfuel.com/bots/${BotID}/users/${userID}/send`;
   const query = Object.assign({
         chatfuel_token:Token,
         chatfuel_block_name:Block},data);
-  const ChatfuelApiUrl = url.format({pathname:})
+  const ChatfuelApiUrl = url.format({pathname:BroadCastApiUrl,query});
+  const options={
+			uri:  ChatfuelApiUrl,
+      method: 'Post',
+			headers:{Content_Type:"application/json"}};
   
   
 	// Send the HTTP request to flowxo
 	request(
-		{
-			uri: FlowxoWebhookURL + data,
-			method: 'GET'
-		},
+		
+			options
+			,
 		(err, res, body) => {
 			console.log('body', body);
 			if (!err) {
 				console.log('message sent!');
 			} else {
-				console.error('Unable to send message:' + err);
+				console.error('Unable to send message to chatfuel:' + err);
 			}
 		}
 	);
