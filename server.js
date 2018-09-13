@@ -55,7 +55,7 @@ app.post('/showwebview', (req, res) => {
     }
 }]};
 
-	console.log('web', body);
+	console.log('webview to chatfuel', body);
 	console.log(body);
 	res.json(response)
 		.status(200)
@@ -73,7 +73,8 @@ app.post('/actions', (req, res) => {
 	let body = req.body;
 	console.log('submitted to server', body);
 	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
-	callflowxo(body.psid, response);
+	//callflowxo(body.psid, response);
+  
 	console.log(body);
 	res
 		.status(200)
