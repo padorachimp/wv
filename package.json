@@ -17,8 +17,7 @@
     "prettier": "^1.14.2",
     "nocache": "^2.0.0",
     "consolidate": "^0.15.1",
-    "mustache": "^2.3.2",
-    "request-promise": "^4.2.2"
+    "mustache": "^2.3.2"
   },
   "engines": {
     "node": "10.x"

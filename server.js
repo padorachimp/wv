@@ -1,28 +1,28 @@
 'use strict';
 // server.js
 // where your node app starts
-const Token =process.env.Token;
+
 const request = require('request');
-const requestPromise = require('request-promise');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const nocache = require('nocache');
 const url= require('url');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('src'));
 app.use(express.static(path.join(__dirname, 'public')));
-var engines = require('consolidate');
 
+var engines = require('consolidate');
 app.set('views', __dirname + '/views');
 app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
 });
-//
+
 
 
 //showwebview
@@ -53,6 +53,8 @@ app.get('/showwebview', (req, res) => {
   
 
 });
+
+
 // trigger the webview
 app.get('/webview', (req, res) => {
 	console.log('Webview opned by', req.query);
@@ -74,7 +76,8 @@ app.post('/actions', (req, res) =>
 
 
 //Chatfuel broadcast
-function ToChatfuel(data) {
+function ToChatfuel(data) 
+{
   const Token =process.env.Token;
   const BotID= process.env.BotId;
   const {UserID,Block}=data;
@@ -89,22 +92,16 @@ function ToChatfuel(data) {
 			headers:{'Content-Type':'application/json'}};
   console.log(options);
   
-	// Send the HTTP request to flowxo
-	request(
-		
-			options
-			,
-		(err, res, body) => {
-			console.log('body', body);
-			if (!err) {
-				console.log('message sent!');
-			} else {
-				console.error('Unable to send message to chatfuel:' + err);
-			}
-		}
-	);
-  
- // requestPromise.post(options).then(()=>{console.log("sent");)
+	// Send the HTTP request to Chatfuel
+	request(options,(err, res, body) => {console.log('body', body);
+                                        if (!err) {
+                                          console.log('message sent!');
+                                        } else {
+                                          console.error('Unable to send message to chatfuel:' + err);
+                                        }
+                                      }
+                                    );
+
 }
 
 // listen for requests :)
