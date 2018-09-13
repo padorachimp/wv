@@ -46,7 +46,7 @@ app.post('/showwebview', (req, res) => {
             text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
             buttons: [{
                 type: "web_url",
-                url:  "https://glib-flyingfish.glitch.me/webview",
+                url:  "https://glib-flyingfish.glitch.me/webview?id="+body["messenger user id"],
                 title: "Set preferences",
                 webview_height_ratio: "compact",
                 messenger_extensions: true
@@ -55,7 +55,7 @@ app.post('/showwebview', (req, res) => {
     }
 }]};
 
-	console.log('submitted to server', body);
+	console.log('web', body);
 	console.log(body);
 	res.json(response)
 		.status(200)
