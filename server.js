@@ -36,8 +36,8 @@ app.post('/to_chatfuel', (req, res) => {
 
 //showwebview
 
-app.post('/showwebview', (req, res) => {
-	let body = req.body;
+app.get('/showwebview', (req, res) => {
+	let body = req.query;
     let response = {messages:[{
     attachment: {
         type: "template",
@@ -46,7 +46,7 @@ app.post('/showwebview', (req, res) => {
             text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
             buttons: [{
                 type: "web_url",
-                url:  "https://glib-flyingfish.glitch.me/webview?id="+body["messenger user id"],
+                url:  "https://glib-flyingfish.glitch.me/webview?id={}"+body["id"],
                 title: "Set preferences",
                 webview_height_ratio: "compact",
                 messenger_extensions: true
