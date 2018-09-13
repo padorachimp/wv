@@ -143,8 +143,8 @@ function callflowxo(sender_psid, response) {
 function ToChatfuel(data) {
   const Token =process.env.Token;
   const BotID= process.env.BotId;
-  const {userID,Block}=data;
-  const BroadCastApiUrl=`https://api.chatfuel.com/bots/${BotID}/users/${userID}/send`;
+  const {UserID,Block}=data;
+  const BroadCastApiUrl=`https://api.chatfuel.com/bots/${BotID}/users/${UserID}/send`;
   const query = Object.assign({
         chatfuel_token:Token,
         chatfuel_block_name:Block},data);
@@ -152,8 +152,8 @@ function ToChatfuel(data) {
   const options={
 			uri:  ChatfuelApiUrl,
       method: 'Post',
-			headers:{Content_Type:"application/json"}};
-  
+			headers:{'Content-Type':"application/json"}};
+  console.log(options);
   
 	// Send the HTTP request to flowxo
 	request(
