@@ -24,16 +24,6 @@ app.set('view engine', 'html');
 app.get('/', function(request, response) {
 });
 //
-app.post('/to_chatfuel', (req, res) => {
-	let body = req.body;
-	console.log('submitted to server', body);
-	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
-	callflowxo(body.psid, response);
-	console.log(body);
-	res
-		.status(200)
-		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
-});
 
 
 //showwebview
@@ -48,7 +38,7 @@ app.get('/showwebview', (req, res) => {
             text: "Welcome to our chatbot",
             buttons: [{
                 type: "web_url",
-                url:  `https://glib-flyingfish.glitch.me/webview?id=${body.id}&block=${body.block}`,
+                url:  window.location.hostname+`/webview?id=${body.id}&block=${body.block}`,
                 title: "Show Webview",
                
                 messenger_extensions: true
@@ -83,61 +73,7 @@ app.post('/actions', (req, res) => {
 		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
 });
 
-// receive logs from the webhook 
-app.post('/logs', (req, res) => {
-	console.log('Logging...');
-	/* var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-	let message = req.body.message;
-	let o = req.body.o;
-	if (o) {
-		message = message + '\t' + o;
-	}
 
-	console.log('***Log: ' + message);
-	var m = new Date();
-	var dateString =
-		m.getUTCFullYear() +
-		'/' +
-		(m.getUTCMonth() + 1) +
-		'/' +
-		m.getUTCDate() +
-		' ' +
-		m.getUTCHours() +
-		':' +
-		m.getUTCMinutes() +
-		':' +
-		m.getUTCSeconds();
-	message = '\n' + dateString + ' -- ' + ip + ' -- ' + message + '\n';
-	var fs = require('fs');
-	fs.appendFile(path.join(__dirname + '/log.txt'), message, function(err) {
-		if (err) {
-			return console.log(err);
-		}
-
-		console.log('The file was saved!');
-	});*/
-});
-
-
-// flowxo send request 
-function callflowxo(sender_psid, response) {
-
-	// Send the HTTP request to flowxo
-	request(
-		{
-			uri: FlowxoWebhookURL + response,
-			method: 'GET'
-		},
-		(err, res, body) => {
-			console.log('body', body);
-			if (!err) {
-				console.log('message sent!');
-			} else {
-				console.error('Unable to send message:' + err);
-			}
-		}
-	);
-}
 
 
 //Chatfuel broadcast
