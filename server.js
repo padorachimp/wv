@@ -3,6 +3,7 @@
 // where your node app starts
 const Token =process.env.Token;
 const request = require('request');
+const requestPromise = require('request-promise');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -152,7 +153,7 @@ function ToChatfuel(data) {
   const options={
 			uri:  ChatfuelApiUrl,
       method: 'Post',
-			headers:{'Content-Type':"application/json"}};
+			headers:{'Content-Type':'application/json'}};
   console.log(options);
   
 	// Send the HTTP request to flowxo
