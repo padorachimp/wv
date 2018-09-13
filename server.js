@@ -152,7 +152,7 @@ function ToChatfuel(data) {
   const ChatfuelApiUrl = url.format({pathname:BroadCastApiUrl,query});
   const options={
 			uri:  ChatfuelApiUrl,
-      method: 'Post',
+      method: 'post',
 			headers:{'Content-Type':'application/json'}};
   console.log(options);
   
@@ -170,6 +170,8 @@ function ToChatfuel(data) {
 			}
 		}
 	);
+  
+ // requestPromise.post(options).then(()=>{console.log("sent");)
 }
 
 // listen for requests :)
