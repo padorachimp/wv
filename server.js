@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const nocache = require('nocache');
+const url= require('url');
 const  FlowxoWebhookURL = 'https://flowxo.com/hooks/a/6km6a7md'
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -139,12 +140,20 @@ function callflowxo(sender_psid, response) {
 
 
 //Chatfuel broadcast
-function ToChatfuel(response) {
+function ToChatfuel(data) {
+  const Token =process.env.Token;
+  const BotID= process.env.BotId;
+  const {userID,Block}=data;
+  const query = Object.assign({
+        chatfuel_token:Token,
+        chatfuel_block_name:Block},data);
+  const ChatfuelApiUrl = url.format({pathname:})
+  
   
 	// Send the HTTP request to flowxo
 	request(
 		{
-			uri: FlowxoWebhookURL + response,
+			uri: FlowxoWebhookURL + data,
 			method: 'GET'
 		},
 		(err, res, body) => {
