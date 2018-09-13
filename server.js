@@ -45,12 +45,12 @@ app.get('/showwebview', (req, res) => {
         type: "template",
         payload: {
             template_type: "button",
-            text: "OK, let's set your room preferences so I won't need to ask for them in the future.",
+            text: "Welcome to our chatbot",
             buttons: [{
                 type: "web_url",
                 url:  `https://glib-flyingfish.glitch.me/webview?id=${body.id}&block=${body.block}`,
-                title: "Set preferences",
-                webview_height_ratio: "compact",
+                title: "Show Webview",
+               
                 messenger_extensions: true
             }]
         }
