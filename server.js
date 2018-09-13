@@ -1,7 +1,7 @@
 'use strict';
 // server.js
 // where your node app starts
-
+const Token =process.env.Token;
 const request = require('request');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -120,6 +120,27 @@ app.post('/logs', (req, res) => {
 // flowxo send request 
 function callflowxo(sender_psid, response) {
 
+	// Send the HTTP request to flowxo
+	request(
+		{
+			uri: FlowxoWebhookURL + response,
+			method: 'GET'
+		},
+		(err, res, body) => {
+			console.log('body', body);
+			if (!err) {
+				console.log('message sent!');
+			} else {
+				console.error('Unable to send message:' + err);
+			}
+		}
+	);
+}
+
+
+//Chatfuel broadcast
+function ToChatfuel(response) {
+  
 	// Send the HTTP request to flowxo
 	request(
 		{
