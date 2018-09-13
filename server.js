@@ -30,6 +30,7 @@ app.get('/', function(request, response) {
 
 app.get('/showwebview', (req, res) => {
 	let body = req.query;
+   const fullUrl = 'https://' + req.get('host')
     let response = {messages:[{
     attachment: {
         type: "template",
@@ -38,9 +39,8 @@ app.get('/showwebview', (req, res) => {
             text: "Welcome to our chatbot",
             buttons: [{
                 type: "web_url",
-                url:  window.location.hostname+`/webview?id=${body.id}&block=${body.block}`,
+                url:  fullUrl+`/webview?id=${body.id}&block=${body.block}`,
                 title: "Show Webview",
-               
                 messenger_extensions: true
             }]
         }
@@ -56,18 +56,16 @@ app.get('/showwebview', (req, res) => {
 });
 // trigger the webview
 app.get('/webview', (req, res) => {
-	console.log('a new re"quest made', req.query);
+	console.log('Webview opned by', req.query);
   return res.render(__dirname + '/Views/welcome.html',req.query);
 });
 
 // Sends response messages via the Send API
-app.post('/actions', (req, res) => {
+app.post('/actions', (req, res) =>
+{
 	let body = req.body;
 	console.log('submitted to server', body);
-	let response = `?id=${body.psid}&name=${body.Name}&tel=${body.Tel}&address1=${body.Address}&address2=${body.Town}&city=${body.City}&zip=${body.Zip}&select=${body.select}`;
-	//callflowxo(body.psid, response);
   ToChatfuel(body)
-	console.log(body);
 	res
 		.status(200)
 		.send(JSON.stringify({success: 'Please close this window to return to the conversation thread.'}));
