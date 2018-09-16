@@ -51,7 +51,8 @@ fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, dat
     
    //convert it back to json
       console.log(cashing);
-    fs.writeFile(__dirname + '/data.json', cashing, 'utf8',(err) => {
+      var json = JSON.stringify(cashing);
+    fs.writeFile(__dirname + '/data.json', json, 'utf8',(err) => {
   if (err) throw err;
   console.log('The file has been saved!');})
 }
