@@ -24,7 +24,7 @@ function search(params) {
       data.forEach(r => {
         //if (r.zimmer == size && r.geschoss == floor && r.garten == garden[0]) 
         {
-          result.push(r);
+          result.push(r.province);
         }
       });
 
