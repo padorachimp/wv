@@ -1,5 +1,5 @@
 var gsjson = require('google-spreadsheet-to-json');
-
+var Set = require('Set');
 var get_data = new Promise(function(resolve, reject) {
   gsjson({
     spreadsheetId: '1nFd4VOmDC829sf2uob3VJuw0LKey0mdiPoBSuwqf7WA',
@@ -28,17 +28,13 @@ function search(params) {
         }
       });
 
-      var i = 0;
-      while ( result.length > i) {
-        var title = result[i].whg + ' ' + result[i].gebäude;
-        
-        i++;
-        
-      }
-
-      if (i > 0) {
       
-        resolve(result);
+      
+
+   
+      if (result){
+        var ok=new Set(result);
+        resolve(ok );
       } else reject('no result');
     });
   });

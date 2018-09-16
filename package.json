@@ -18,7 +18,8 @@
     "nocache": "^2.0.0",
     "consolidate": "^0.15.1",
     "mustache": "^2.3.2",
-    "google-spreadsheet-to-json": "^1.0.0"
+    "google-spreadsheet-to-json": "^1.0.0",
+    "Set": "^0.4.1"
   },
   "engines": {
     "node": "10.x"
