@@ -23,8 +23,6 @@ app.set('view engine', 'html');
 app.get('/', function(request, response) {
 });
 
-
-
 //showwebview
 
 app.get('/showwebview', (req, res) => {
@@ -49,8 +47,7 @@ app.get('/showwebview', (req, res) => {
 	console.log('webview to chatfuel', body);
 	console.log(body);
 	res.json(response)
-		.status(200)
-  
+		.status(200) 
 
 });
 
@@ -112,6 +109,5 @@ var listener = app.listen(process.env.PORT, function() {
 const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
 const fs = require('fs');
-
 var data = fs.readFileSync('./ThailandAddress/data.json','utf8');
 console.log(data);

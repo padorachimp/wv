@@ -1,4 +1,4 @@
-var gsjson = require('google-spreadsheet-to-json');
+/* var gsjson = require('google-spreadsheet-to-json');
 var Set = require('Set');
 var fs = require('fs');
 var get_data = new Promise(function(resolve, reject) {
@@ -6,7 +6,7 @@ var get_data = new Promise(function(resolve, reject) {
     spreadsheetId: '1nFd4VOmDC829sf2uob3VJuw0LKey0mdiPoBSuwqf7WA',
   })
     .then(function(result) {
-    
+      console.log("hello");
       //cashData(result);
       resolve(result);
     })
@@ -62,4 +62,5 @@ fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, dat
 
 module.exports = {
   search: search,
-};
+}; 
+*/
