@@ -6,7 +6,7 @@ var get_data = new Promise(function(resolve, reject) {
     spreadsheetId: '1nFd4VOmDC829sf2uob3VJuw0LKey0mdiPoBSuwqf7WA',
   })
     .then(function(result) {
-      console.log(result.length,result);
+    
       cashData(result);
       resolve(result);
     })
@@ -43,16 +43,19 @@ function search(params) {
 }
 
 
-function cashData(data){
+function cashData(cashing){
 fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, data){
     if (err){
         console.log(err);
     } else {
     
-    var json = JSON.stringify(data); //convert it back to json
-      console.log(data);
-    fs.writeFile(__dirname + '/data.json', json, 'utf8'); // write it back 
-}});
+   //convert it back to json
+      console.log(cashing);
+    fs.writeFile(__dirname + '/data.json', cashing, 'utf8',(err) => {
+  if (err) throw err;
+  console.log('The file has been saved!');})
+}
+});
 
 }
 
