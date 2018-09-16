@@ -7,7 +7,7 @@ var get_data = new Promise(function(resolve, reject) {
   })
     .then(function(result) {
     
-      cashData(result);
+      //cashData(result);
       resolve(result);
     })
     .catch(function(err) {
