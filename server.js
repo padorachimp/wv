@@ -109,5 +109,5 @@ var listener = app.listen(process.env.PORT, function() {
 //const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
 const fs = require('fs');
-var data = fs.readFileSync('./ThailandAddress/data.json','utf8');
+var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
 console.log(data);
