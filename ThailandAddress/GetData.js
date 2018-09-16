@@ -50,7 +50,7 @@ fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, dat
     } else {
     
     var json = JSON.stringify(data); //convert it back to json
-    fs.writeFile(__dirname + '/data.json', json, 'utf8', (ok,err)=>{console.log("ok "+ok,"err "+err)}); // write it back 
+    fs.writeFile(__dirname + '/data.json', json, 'utf8', (ok)=>{console.log("ok "+ok,"err "+err)}); // write it back 
 }});
 
 }
