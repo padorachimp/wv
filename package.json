@@ -17,7 +17,8 @@
     "prettier": "^1.14.2",
     "nocache": "^2.0.0",
     "consolidate": "^0.15.1",
-    "mustache": "^2.3.2"
+    "mustache": "^2.3.2",
+    "google-spreadsheet-to-json": "^1.0.0"
   },
   "engines": {
     "node": "10.x"
