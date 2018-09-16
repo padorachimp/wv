@@ -6,7 +6,7 @@ var get_data = new Promise(function(resolve, reject) {
     spreadsheetId: '1nFd4VOmDC829sf2uob3VJuw0LKey0mdiPoBSuwqf7WA',
   })
     .then(function(result) {
-      console.log(result.length);
+      console.log(result.length,result);
       cashData(result);
       resolve(result);
     })
@@ -50,7 +50,8 @@ fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, dat
     } else {
     
     var json = JSON.stringify(data); //convert it back to json
-    fs.writeFile(__dirname + '/data.json', json, 'utf8', (ok)=>{console.log("ok "+ok)}); // write it back 
+      console.log(data);
+    fs.writeFile(__dirname + '/data.json', json, 'utf8'); // write it back 
 }});
 
 }
