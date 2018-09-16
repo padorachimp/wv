@@ -35,8 +35,8 @@ function search(params) {
 
    
       if (result){
-        var ok=new Set(result);
-        resolve(ok );
+        
+        resolve(result);
       } else reject('no result');
     });
   });
@@ -44,13 +44,13 @@ function search(params) {
 
 
 function cashData(data){
-fs.readFile('myjsonfile.json', 'utf8', function readFileCallback(err, data){
+fs.readFile(__dirname + '/data.json', 'utf8', function readFileCallback(err, data){
     if (err){
         console.log(err);
     } else {
     
     var json = JSON.stringify(data); //convert it back to json
-    fs.writeFile('data.json', json, 'utf8', (ok,err)=>{console.log("ok "+ok,"err "+err)}); // write it back 
+    fs.writeFile(__dirname + '/data.json', json, 'utf8', (ok,err)=>{console.log("ok "+ok,"err "+err)}); // write it back 
 }});
 
 }
