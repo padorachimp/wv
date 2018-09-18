@@ -25,21 +25,21 @@ function search(params) {
     get_data.then(data => {
       console.log(data.length);
  
-      var result = [];
+     /* var result = [];
       data.forEach(r => {
         //if (r.zimmer == size && r.geschoss == floor && r.garten == garden[0]) 
         {
           result.push(r.province);
         }
       });
-
+*/
       
       
 
    
-      if (result){
+      if (data){
         
-        resolve(result);
+        resolve(data);
       } else reject('no result');
     });
   });
