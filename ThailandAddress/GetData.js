@@ -9,9 +9,9 @@ var get_data = new Promise(function(resolve, reject) {
     .then(function(result) {
       console.log("hello");
       //cashData(result);
-    var l=hash(result)
-      resolve(l);
-    console.log(l);
+    
+      resolve(result);
+   
     })
     .catch(function(err) {
       console.log(err.message);
