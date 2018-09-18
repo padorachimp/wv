@@ -3,7 +3,8 @@ dependencies:
   consolidate: 0.15.1
   express: 4.16.3
   google-spreadsheet-to-json: 1.0.0
-  mustache: 2.3.2
+  hashmap: 2.3.0
+  mustache: 3.0.0
   nocache: 2.0.0
   npm-update-all: 1.0.1
   prettier: 1.14.2
@@ -469,6 +470,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-+qnmNjI4OfH2ipQ9VQOw23bBd/ibtfbVdK2fYbY4acTDqKTW/YDp9McimZdDbG8iV9fZizUqQMD5xvriB146TA==
+  /hashmap/2.3.0:
+    dev: false
+    resolution:
+      integrity: sha1-sT+2XafIul49uPwbjFuh0ASdryI=
   /http-errors/1.6.2:
     dependencies:
       depd: 1.1.1
@@ -654,13 +659,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
-  /mustache/2.3.2:
+  /mustache/3.0.0:
     dev: false
     engines:
       npm: '>=1.4.0'
     hasBin: true
     resolution:
-      integrity: sha512-KpMNwdQsYz3O/SBS1qJ/o3sqUJ5wSb8gb0pul8CO0S56b9Y2ALm8zCfsjPXsqGFfoNBkDwZuZIAjhsZI03gYVQ==
+      integrity: sha512-bhBDkK/PioIbtQzRIbGUGypvc3MC4c389QnJt8KDIEJ666OidRPoXAQAHPivikfS3JkMEaWoPvcDL7YrQxtSwg==
   /negotiator/0.6.1:
     dev: false
     engines:
@@ -968,7 +973,8 @@ specifiers:
   consolidate: ^0.15.1
   express: ^4.16.3
   google-spreadsheet-to-json: ^1.0.0
-  mustache: ^2.3.2
+  hashmap: ^2.3.0
+  mustache: ^3.0.0
   nocache: ^2.0.0
   npm-update-all: ^1.0.1
   prettier: ^1.14.2

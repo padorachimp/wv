@@ -112,4 +112,3 @@ const fs = require('fs');
 //var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
 //console.log(data);
 
-

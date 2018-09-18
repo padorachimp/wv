@@ -64,3 +64,7 @@ module.exports = {
   search: search,
 }; 
 */
+
+
+var HashMap = require('hashmap');
+var map = new HashMap();
