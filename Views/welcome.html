@@ -7,19 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
   
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script>
-       
-     <script type="text/javascript" src="webvUI.min.js"></script>
-     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"></script>
-      <link rel="stylesheet" href="/webvUI.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script> 
+    <script type="text/javascript" src="webvUI.min.js"></script>
+    <link rel="stylesheet" href="/webvUI.min.css">
     <link rel="stylesheet" href="/webvUI-menu.min.css">
-    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"></script>
-   
-</head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+  </head>
+  
+  
+<body>
     
     <script type="text/javascript">
     //load facebbok messenger Extention
@@ -33,7 +32,7 @@
 }(document, 'script', 'Messenger'));
       
     function GenerateProvice(){console.log("changed");}
-      $.get( "/getzipcodes", function( data ) {console.log(data);})
+      $.get( "/getzipcodes", function( data ) {console.log(data); $("#Province").autocomplete({source: data});})
       
       
    </script>
@@ -175,35 +174,7 @@
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
                                            
-                                      
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-                                           $("#Province").autocomplete({source: availableTags});
+                                   
   
                                 
                                 $('#my_form').submit(function(event){
