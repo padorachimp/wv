@@ -33,6 +33,8 @@
 }(document, 'script', 'Messenger'));
       
     function GenerateProvice(){console.log("changed");}
+      $.get( "/getzipcodes", function( data ) {console.log(data);})
+      
       
    </script>
     
@@ -174,9 +176,35 @@
 <script> window.extAsyncInit = function() {console.log("ready")
                                            
                                       
-  $.get( "/getzipcodes", function( data ) {console.log(data);})
-       var option=["blue", "green", "pink", "red", "yellow"];
-      $("#Province").autocomplete({source: option});
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+                                           $("#Province").autocomplete({source: availableTags});
+  
                                 
                                 $('#my_form').submit(function(event){
                                             event.preventDefault();
