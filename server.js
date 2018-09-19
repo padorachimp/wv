@@ -9,6 +9,7 @@ const app = express();
 const path = require('path');
 const nocache = require('nocache');
 const url= require('url');
+const immutable = require('immutable');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -106,9 +107,17 @@ var listener = app.listen(process.env.PORT, function() {
 	console.log('Your app is listening on port ' + listener.address().port);
 });
 
+const getZipCodes = (data) => {
+  let zipcodes = immutable.Set();
+  for(let i = 0; i<data.length; i++){
+    
+  }
+};
+
 //const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
 const fs = require('fs');
 var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
+const zipcodes = getZipCodes(data);
 console.log(data);
 
