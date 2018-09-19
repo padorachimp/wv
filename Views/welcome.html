@@ -26,7 +26,7 @@
   js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
-    
+    function GenerateProvice(){console.log("changed");}
    </script>
     
         <form id ="my_form"  >
@@ -112,8 +112,11 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="on"  list="ProvinceList" onchange="GenerateProvice()">
-                        </div>
+                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="list"  list="ProvinceList" onchange="GenerateProvice()">
+                      <datalist id="ProvinceList">
+                          <option value="molaka"/>
+                          </datalist>
+                      </div>
                     </div>
                 </div>
 
@@ -165,9 +168,9 @@
                                                console.log(data);
                                          
                                               
-                                           }
+                                           })
                                       
-                                function GenerateProvice(){console.log(changed);}
+                                
                                 $('#my_form').submit(function(event){
                                             event.preventDefault();
                                             console.log("submit");
