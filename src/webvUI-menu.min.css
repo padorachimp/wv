@@ -17,19 +17,15 @@ ui-autocomplete { position: absolute; cursor: default; }
 .ui-menu-item .ui-menu-item {
         margin-top: -3px;
 }
-.ui-menu-item .uui-menu-item-wrapper {
+.ui-menu-item .ui-menu-item-wrapper {
         margin:0;
         padding: 0;
-        width: 200px;
+        width: 100%;
 }
-.ui-menu-item .ui-menu-item-wrapper a {
+.ui-menu-item .ui-menu-item-wrapper  {
         text-decoration:none;
         display:block;
         padding:.2em .4em;
         line-height:1.5;
         zoom:1;
-}
-.ui-menu-item .ui-menu-item-wrapper a.ui-state-hover,
-.ui-menu-item .ui-menu-item-wrapper a.ui-state-active {
-        margin: -1px;
 }
