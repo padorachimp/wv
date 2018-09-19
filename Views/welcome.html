@@ -167,7 +167,28 @@
                                             { 
                                               source: ["choice1", "choice2","choice3"] 
                                             }
+                                           )
+
+                                                console.info('Autocomplete is ready!');
+                                                $('#my_form').toggle();
+                                            
                                            );
+                                           
+                                           
+        
+       
+
+           
+       
+
+        // watch on change
+
+        $('#demo1 [name="City"]').change(function(){
+            console.log('ตำบล', this.value);
+        });
+       
+        
+                                           
                                           $('#my_form').submit(function(event){
                                             event.preventDefault();
                                             console.log("submit");
