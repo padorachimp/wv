@@ -109,7 +109,7 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 const getZipCodes = (data) => {
-  let html =""
+  let html =[]
   let zipcodes = Immutable.Map();
   for(let i = 0; i<data.length; i++){
     let record = data[i];
@@ -128,7 +128,7 @@ const getZipCodes = (data) => {
         province = province.set(record['district'], district);
         zipcodes = zipcodes.set(record['province'], province);
     let value= record['province']+' '+record['district']+' '+record.subdistrict+' '+record.zipcode
-    html+=`<option value='${value}'/>`
+    html.push(value);
   }
   return [zipcodes, html];
 };
@@ -148,5 +148,6 @@ zipcodes = getZipCodes(JSON.parse(data));
 
 
 app.get('/getzipcodes', (req, res) => {
+  console
   res.send(zipcodes[1]);
 });

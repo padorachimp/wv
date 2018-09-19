@@ -112,7 +112,7 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="list"  list="ProvinceList" onchange="GenerateProvice()">
+                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="list" onchange="GenerateProvice()">
                       <datalist id="ProvinceList">
                           <option value="molaka"/>
                           </datalist>
@@ -164,7 +164,7 @@
 <script> window.extAsyncInit = function() {console.log("ready")
                                            $.get( "/getzipcodes", function( data ) {
                                              var option = document.getElementById("ProvinceList");
-                                             option.innerHTML(data);
+                                             $("#Province").autocomplete(data)
                                                console.log(data);})
                                       
                                 
