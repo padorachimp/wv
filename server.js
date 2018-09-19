@@ -111,22 +111,22 @@ const getZipCodes = (data) => {
   let zipcodes = immutable.Map();
   for(let i = 0; i<data.length; i++){
     const record = data[i];
-    if(zipcodes.has(record['province'])){
-      let province = zipcodes.get(record['province']);
-      if(province.has(record['district'])){
-        let district = province.get(record['district']);
-        const newDist = district.insert({subdistrict: record.subdistrict, zipcode: record.zipcode});
-        const newProvince = province.update(record['district'], newDist => newDist);
-        zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
-      } else {
-        let district = province.add(record['district'], immutable.List());
-        const newDist = district.add({subdistrict: record.subdistrict, zipcode: record.zipcode});
-        const newProvince = province.update(record['district'], newDist => newDist);
-        zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
-      }
+    if(!zipcodes.has(record['province'])){
+      zipcodes = zipcodes.add(record['province'], immutable.Map());
     }
-    zipcodes.add(data[i]['province']);
+    
+    let province = zipcodes.get(record['province']);
+    if(!province.has(record['district'])){
+      province = province.add(record['district'], immutable.List());
+      zipcodes = zipcodes.update(record['province'], province => province);
+    }
+    
+    let district = province.get(record['district']);
+        district = district.insert({subdistrict: record.subdistrict, zipcode: record.zipcode});
+        province = province.update(record['district'], newDist => newDist);
+        zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
   }
+  return zipcodes;
 };
 
 //const Googledata = require('./ThailandAddress/GetData.js');
@@ -134,5 +134,9 @@ const getZipCodes = (data) => {
 /*const fs = require('fs');
 var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
 const zipcodes = getZipCodes(data);
+
+
 console.log(data);*/
+
+console.log('shitto da', zipcodes.get('').get('').get(5));
 
