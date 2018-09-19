@@ -115,11 +115,14 @@ const getZipCodes = (data) => {
       let province = zipcodes.get(record['province']);
       if(province.has(record['district'])){
         let district = province.get(record['district']);
-        const newDist = district.add({subdistrict: record.subdistrict, zipcode: record.zipcode});
+        const newDist = district.insert({subdistrict: record.subdistrict, zipcode: record.zipcode});
         const newProvince = province.update(record['district'], newDist => newDist);
         zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
       } else {
-        
+        let district = province.add(record['district'], immutable.List());
+        const newDist = district.add({subdistrict: record.subdistrict, zipcode: record.zipcode});
+        const newProvince = province.update(record['district'], newDist => newDist);
+        zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
       }
     }
     zipcodes.add(data[i]['province']);
