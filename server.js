@@ -110,14 +110,20 @@ var listener = app.listen(process.env.PORT, function() {
 const getZipCodes = (data) => {
   let zipcodes = immutable.Set();
   for(let i = 0; i<data.length; i++){
-    
+    if(zipcodes.has(data[i]['province'])){
+      let province = zipcodes.get(data[i]['province']);
+      if(province.has(data[i]['district'])){
+        let district = province.get(data[i]['district'])
+      }
+    }
+    zipcodes.add(data[i]['province']);
   }
 };
 
 //const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
-const fs = require('fs');
+/*const fs = require('fs');
 var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
 const zipcodes = getZipCodes(data);
-console.log(data);
+console.log(data);*/
 
