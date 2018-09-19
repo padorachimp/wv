@@ -107,12 +107,12 @@
               
               
                 <div class="webvUI-cells__title">
-                    Township
+                   Province
                 </div>
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Township" name="Town" id="City" autocomplete="on" , list="">
+                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="on"  list="ProvinceList" onchange="GenerateProvice()">
                         </div>
                     </div>
                 </div>
@@ -163,13 +163,11 @@
                                                 
                                                 alert( "Load was performed.",data );
                                                console.log(data);
-                                              });
-                                           $('#City').autocomplete( 
-                                            { 
-                                              source: ["choice1", "choice2","choice3"] 
-                                            }
-                                           )
-
+                                         
+                                              
+                                           }
+                                      
+                                function GenerateProvice(){console.log(changed);}
                                 $('#my_form').submit(function(event){
                                             event.preventDefault();
                                             console.log("submit");
