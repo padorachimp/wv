@@ -105,32 +105,14 @@
                     </div>
                 </div>
               
-              <div class="webvUI-cells__title">
-                    City
-                </div>
-
-                <div class="webvUI-cells">
-                        
-                            <div class="webvUI-cell webvUI-cell_select webvUI-cell_select-after">
-                                <div class="webvUI-cell__hd">
-                                    <label for="" class="webvUI-label">
-                                       City
-                                    </label>
-                                </div>
-                                <div class="webvUI-cell__bd">
-                                    <select class="webvUI-select" name="select" id ="City">
-                                      
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+              
                 <div class="webvUI-cells__title">
                     Township
                 </div>
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Township" name="Town">
+                            <input class="webvUI-input" type="text" placeholder="Township" name="Town" id="City">
                         </div>
                     </div>
                 </div>
@@ -181,7 +163,7 @@
                                                 
                                                 alert( "Load was performed.",data );
                                               });
-                                           $('#Address').autocomplete( 
+                                           $('#City').autocomplete( 
                                             { 
                                               source: ["choice1", "choice2","choice3"] 
                                             }
