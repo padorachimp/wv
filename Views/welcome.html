@@ -8,13 +8,16 @@
   
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script>
-    
+       
      <script type="text/javascript" src="webvUI.min.js"></script>
+     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"></script>
       <link rel="stylesheet" href="/webvUI.min.css">
     <link rel="stylesheet" href="/webvUI-menu.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css"></script>
+   
 </head>
   <body>
     
@@ -30,9 +33,7 @@
 }(document, 'script', 'Messenger'));
       
     function GenerateProvice(){console.log("changed");}
-      $.get( "/getzipcodes", function( data ) {console.log(data);})
-       var option=["blue", "green", "pink", "red", "yellow"];
-      $("#Province").autocomplete({source: option});
+      
    </script>
     
         <form id ="my_form"  >
@@ -156,7 +157,10 @@
                         </div>
                     </div>
                 </div>
-
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
                        
 
                 <button typr="submit" class="webvUI-btn webvUI-btn_primary" href="#"  id="submit">Submit</button>
@@ -170,34 +174,9 @@
 <script> window.extAsyncInit = function() {console.log("ready")
                                            
                                       
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  
+  $.get( "/getzipcodes", function( data ) {console.log(data);})
+       var option=["blue", "green", "pink", "red", "yellow"];
+      $("#Province").autocomplete({source: option});
                                 
                                 $('#my_form').submit(function(event){
                                             event.preventDefault();
