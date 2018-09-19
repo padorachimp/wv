@@ -108,12 +108,18 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 const getZipCodes = (data) => {
-  let zipcodes = immutable.Set();
+  let zipcodes = immutable.Map();
   for(let i = 0; i<data.length; i++){
-    if(zipcodes.has(data[i]['province'])){
-      let province = zipcodes.get(data[i]['province']);
-      if(province.has(data[i]['district'])){
-        let district = province.get(data[i]['district'])
+    const record = data[i];
+    if(zipcodes.has(record['province'])){
+      let province = zipcodes.get(record['province']);
+      if(province.has(record['district'])){
+        let district = province.get(record['district']);
+        const newDist = district.add({subdistrict: record.subdistrict, zipcode: record.zipcode});
+        const newProvince = province.update(record['district'], newDist => newDist);
+        zipcodes = zipcodes.update(record['province'], newProvince => newProvince);
+      } else {
+        
       }
     }
     zipcodes.add(data[i]['province']);
