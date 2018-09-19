@@ -109,7 +109,6 @@ var listener = app.listen(process.env.PORT, function() {
 
 const getZipCodes = (data) => {
   let zipcodes = Immutable.Map();
-  console.log(data[0]);
   for(let i = 0; i<data.length; i++){
     let record = data[i];
     if(!zipcodes.has(record['province'])){
@@ -119,15 +118,13 @@ const getZipCodes = (data) => {
     let province = zipcodes.get(record['province']);
     if(!province.has(record['district'])){
       province = province.set(record['district'], Immutable.List());
-      zipcodes = zipcodes.update(record['province'], province => province);
-      console.log(zipcodes, province);
-      break;
+      zipcodes = zipcodes.set(record['province'], province);
     }
     
     let district = province.get(record['district']);
-        district = district.insert({subdistrict: record.subdistrict, zipcode: record.zipcode});
-        province = province.update(record['district'], district => district);
-        zipcodes = zipcodes.update(record['province'], province => province);
+        district = district.push(JSON.stringify({subdistrict: record.subdistrict, zipcode: record.zipcode}));
+        province = province.set(record['district'], district);
+        zipcodes = zipcodes.set(record['province'], province);
   }
   return zipcodes;
 };
@@ -139,7 +136,7 @@ var data = fs.readFile('./ThailandAddress/minidata.json','utf8', (err, data) => 
 const zipcodes = getZipCodes(JSON.parse(data));
 
 
-console.log('data',zipcodes.get('กรุงเทพมหานคร'));
-// console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร').get(0));
+// console.log('data',zipcodes.get('กรุงเทพมหานคร'));
+ console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));
 });
 
