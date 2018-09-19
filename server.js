@@ -22,8 +22,7 @@ app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 
 app.get('/', function(req, res) {
-  	console.log('Webview opned by', req.query);
-  return res.render(__dirname + '/Views/welcome.html',req.query);
+
 });
 
 //showwebview

@@ -180,6 +180,15 @@
   </form>
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
+                                           $.get( "/getzipcodes", function( data ) {
+                                                
+                                                alert( "Load was performed.",data );
+                                              });
+                                           $('#address').autocomplete( 
+                                            { 
+                                              source: ["choice1", "choice2","choice3"] 
+                                            }
+                                           );
                                           $('#my_form').submit(function(event){
                                             event.preventDefault();
                                             console.log("submit");
