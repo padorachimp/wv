@@ -112,7 +112,7 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Township" name="Town" id="City">
+                            <input class="webvUI-input" type="text" placeholder="Township" name="Town" id="City" autocomplete="on" , list="">
                         </div>
                     </div>
                 </div>
@@ -159,9 +159,10 @@
   </form>
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
-                                           $.get( "/getzipcodes", function( data ) {
+                                           $.get( "https://glib-flyingfish.glitch.me/getzipcodes", function( data ) {
                                                 
                                                 alert( "Load was performed.",data );
+                                               console.log(data);
                                               });
                                            $('#City').autocomplete( 
                                             { 
@@ -169,27 +170,7 @@
                                             }
                                            )
 
-                                                console.info('Autocomplete is ready!');
-                                                $('#my_form').toggle();
-                                            
-                                           );
-                                           
-                                           
-        
-       
-
-           
-       
-
-        // watch on change
-
-        $('#demo1 [name="City"]').change(function(){
-            console.log('ตำบล', this.value);
-        });
-       
-        
-                                           
-                                          $('#my_form').submit(function(event){
+                                $('#my_form').submit(function(event){
                                             event.preventDefault();
                                             console.log("submit");
                                             const formdata = $('#my_form').serialize()
