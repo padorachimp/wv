@@ -26,11 +26,12 @@
   js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
-    //function GenerateProvice(){console.log("changed");}
+    function GenerateProvice(){console.log("changed");}
       $.get( "/getzipcodes", function( data ) {
                                              
-                                             $("#Province").autocomplete(data)
                                                console.log(data);})
+       var option=["blue", "green", "pink", "red", "yellow"];
+                                             $("#Province").autocomplete({ource: option})
    </script>
     
         <form id ="my_form"  >
@@ -167,7 +168,7 @@
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
                                            
-                                      
+                                     
                                 
                                 $('#my_form').submit(function(event){
                                             event.preventDefault();
