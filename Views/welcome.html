@@ -163,6 +163,7 @@
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
                                            $.get( "/getzipcodes", function( data ) {
+                                             var option = document.createElelement("options");
                                                console.log(data);})
                                       
                                 
