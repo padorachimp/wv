@@ -109,6 +109,7 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 const getZipCodes = (data) => {
+  let html =""
   let zipcodes = Immutable.Map();
   for(let i = 0; i<data.length; i++){
     let record = data[i];
@@ -126,6 +127,7 @@ const getZipCodes = (data) => {
         district = district.push(JSON.stringify({subdistrict: record.subdistrict, zipcode: record.zipcode}));
         province = province.set(record['district'], district);
         zipcodes = zipcodes.set(record['province'], province);
+    html+="<option value='molaka'/>"
   }
   return zipcodes;
 };
