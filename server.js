@@ -144,4 +144,5 @@ zipcodes = getZipCodes(JSON.parse(data));
 
 
 app.get('/getzipcodes', (req, res) => {
-};
+  res.send(zipcodes);
+});
