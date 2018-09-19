@@ -9,7 +9,7 @@ const app = express();
 const path = require('path');
 const nocache = require('nocache');
 const url= require('url');
-const immutable = require('immutable');
+const Immutable = require('immutable');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -108,16 +108,16 @@ var listener = app.listen(process.env.PORT, function() {
 });
 
 const getZipCodes = (data) => {
-  let zipcodes = immutable.Map();
+  let zipcodes = Immutable.Map();
   for(let i = 0; i<data.length; i++){
     const record = data[i];
     if(!zipcodes.has(record['province'])){
-      zipcodes = zipcodes.add(record['province'], immutable.Map());
+      zipcodes = zipcodes.set(record['province'], Immutable.Map());
     }
     
     let province = zipcodes.get(record['province']);
     if(!province.has(record['district'])){
-      province = province.add(record['district'], immutable.List());
+      province = province.set(record['district'], Immutable.List());
       zipcodes = zipcodes.update(record['province'], province => province);
     }
     
@@ -131,12 +131,12 @@ const getZipCodes = (data) => {
 
 //const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
-/*const fs = require('fs');
-var data = fs.readFileSync('./ThailandAddress/minidata.json','utf8');
+const fs = require('fs');
+var data = fs.readFile('./ThailandAddress/minidata.json','utf8', (err, data) => {
 const zipcodes = getZipCodes(data);
 
 
-console.log(data);*/
-
-console.log('shitto da', zipcodes.get('').get('').get(5));
+// console.log('data',zipcodes);
+console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร').get(5));
+});
 
