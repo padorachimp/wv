@@ -128,7 +128,7 @@ const getZipCodes = (data) => {
         province = province.set(record['district'], district);
         zipcodes = zipcodes.set(record['province'], province);
     let value= record['province']+' '+record['district']+' '+record.subdistrict+' '+record.zipcode
-    html.push(value);
+    html.push({value :value});
   }
   return [zipcodes, html];
 };
@@ -148,6 +148,6 @@ zipcodes = getZipCodes(JSON.parse(data));
 
 
 app.get('/getzipcodes', (req, res) => {
-  console
+  console.log(zipcodes[1]);
   res.send(zipcodes[1]);
 });

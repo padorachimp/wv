@@ -26,7 +26,11 @@
   js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
-    function GenerateProvice(){console.log("changed");}
+    //function GenerateProvice(){console.log("changed");}
+      $.get( "/getzipcodes", function( data ) {
+                                             
+                                             $("#Province").autocomplete(data)
+                                               console.log(data);})
    </script>
     
         <form id ="my_form"  >
@@ -162,10 +166,7 @@
   </form>
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
-                                           $.get( "/getzipcodes", function( data ) {
-                                             var option = document.getElementById("ProvinceList");
-                                             $("#Province").autocomplete(data)
-                                               console.log(data);})
+                                           
                                       
                                 
                                 $('#my_form').submit(function(event){
