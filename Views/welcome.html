@@ -10,7 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="webvUI.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="/webvUI-slider.js"></script>
 </head>
   <body>
@@ -103,26 +104,22 @@
                         </div>
                     </div>
                 </div>
+              
+              <div class="webvUI-cells__title">
+                    City
+                </div>
 
                 <div class="webvUI-cells">
                         
                             <div class="webvUI-cell webvUI-cell_select webvUI-cell_select-after">
                                 <div class="webvUI-cell__hd">
                                     <label for="" class="webvUI-label">
-                                        country
+                                       City
                                     </label>
                                 </div>
                                 <div class="webvUI-cell__bd">
-                                    <select class="webvUI-select" name="select">
-                                        <option value="China">
-                                            China
-                                        </option>
-                                        <option value="United States">
-                                            United States
-                                        </option>
-                                        <option value="United Kingdom">
-                                            United Kingdom
-                                        </option>
+                                    <select class="webvUI-select" name="select" id ="City">
+                                      
                                     </select>
                                 </div>
                             </div>
@@ -184,7 +181,7 @@
                                                 
                                                 alert( "Load was performed.",data );
                                               });
-                                           $('#address').autocomplete( 
+                                           $('#Address').autocomplete( 
                                             { 
                                               source: ["choice1", "choice2","choice3"] 
                                             }
