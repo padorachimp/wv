@@ -162,14 +162,8 @@
   </form>
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
-                                           $.get( "https://glib-flyingfish.glitch.me/getzipcodes", function( data ) {
-                                                
-                                                alert( "Load was performed.",data );
-                                               console.log(data);
-                                               
-                                         
-                                              
-                                           })
+                                           $.get( "/getzipcodes", function( data ) {
+                                               console.log(data);})
                                       
                                 
                                 $('#my_form').submit(function(event){
