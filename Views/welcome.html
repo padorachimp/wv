@@ -32,7 +32,7 @@
 }(document, 'script', 'Messenger'));
       
     function GenerateProvice(){console.log("changed");}
-      $.get( "/getzipcodes", function( data ) {console.log(data); $("#Province").autocomplete({source: data});})
+      $.get( "/getzipcodes", function( data ) { $("#Province").autocomplete({source: data});})
       
       
    </script>

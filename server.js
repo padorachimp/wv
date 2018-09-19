@@ -148,6 +148,6 @@ zipcodes = getZipCodes(JSON.parse(data));
 
 
 app.get('/getzipcodes', (req, res) => {
-  console.log(zipcodes[1]);
+  
   res.send(zipcodes[1]);
 });
