@@ -132,11 +132,16 @@ const getZipCodes = (data) => {
 //const Googledata = require('./ThailandAddress/GetData.js');
 //Googledata.search().then((data=>{console.log(data);}));
 const fs = require('fs');
+let zipcodes;
 var data = fs.readFile('./ThailandAddress/minidata.json','utf8', (err, data) => {
-const zipcodes = getZipCodes(JSON.parse(data));
+zipcodes = getZipCodes(JSON.parse(data));
 
 
 // console.log('data',zipcodes.get('กรุงเทพมหานคร'));
- console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));
+ console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));  
 });
 
+
+
+app.get('/getzipcodes', (req, res) => {
+};
