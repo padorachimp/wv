@@ -127,9 +127,10 @@ const getZipCodes = (data) => {
         district = district.push(JSON.stringify({subdistrict: record.subdistrict, zipcode: record.zipcode}));
         province = province.set(record['district'], district);
         zipcodes = zipcodes.set(record['province'], province);
-    html+="<option value='molaka'/>"
+    let value= record['province']+' '+record['district']+' '+record.subdistrict+' '+record.zipcode
+    html+=`<option value='${value}'/>`
   }
-  return zipcodes;
+  return [zipcodes, html];
 };
 
 //const Googledata = require('./ThailandAddress/GetData.js');
@@ -141,11 +142,11 @@ zipcodes = getZipCodes(JSON.parse(data));
 
 
 // console.log('data',zipcodes.get('กรุงเทพมหานคร'));
- console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));  
+ //console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));  
 });
 
 
 
 app.get('/getzipcodes', (req, res) => {
-  res.send(zipcodes);
+  res.send(zipcodes[1]);
 });
