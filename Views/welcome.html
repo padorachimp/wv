@@ -26,12 +26,39 @@
   js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
+       $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
     function GenerateProvice(){console.log("changed");}
-      $.get( "/getzipcodes", function( data ) {
-                                             
-                                               console.log(data);})
+      $.get( "/getzipcodes", function( data ) {console.log(data);})
        var option=["blue", "green", "pink", "red", "yellow"];
-                                             $("#Province").autocomplete({ource: option})
+                                             $("#Province").autocomplete({source: option});
    </script>
     
         <form id ="my_form"  >
@@ -76,7 +103,7 @@
                     </label>
                     
                 </div>
-
+<input id=""
                 <div class="webvUI-cells__title">
                     Name
                 </div>
@@ -117,10 +144,8 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province" autocomplete="list" onchange="GenerateProvice()">
-                      <datalist id="ProvinceList">
-                          <option value="molaka"/>
-                          </datalist>
+                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province"  onchange="GenerateProvice()">
+                      
                       </div>
                     </div>
                 </div>
