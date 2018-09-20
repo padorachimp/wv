@@ -14,6 +14,7 @@ const Immutable = require('immutable');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('src'));
+app.use(express.static('jquery.Thailand.js-master'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 var engines = require('consolidate');
