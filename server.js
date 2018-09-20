@@ -88,7 +88,7 @@ function ToChatfuel(data)
   
   const ChatfuelApiUrl =  url.format({pathname:BroadCastApiUrl,query});
   const encodequery = unescape(query);
-  console.log(encodequery);
+  console.log(encodequery[0]);
   const options={
 			uri:  ChatfuelApiUrl,
       method: 'post',
