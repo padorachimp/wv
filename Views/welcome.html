@@ -8,18 +8,18 @@
   
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script> 
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/jquery.Thailand.js/dependencies/JQL.min.js"></script>
-<script type="text/javascript" src="/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>  
-  <link rel="stylesheet" href="/jquery.Thailand.js/dist/jquery.Thailand.min.css">
-<script type="text/javascript" src="/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
+    
     <script type="text/javascript" src="webvUI.min.js"></script>
     <link rel="stylesheet" href="/webvUI.min.css">
     <link rel="stylesheet" href="/webvUI-menu.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/jquery.Thailand.js/dependencies/JQL.min.js"></script>
+<script type="text/javascript" src="/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>  
+  <link rel="stylesheet" href="/jquery.Thailand.js/dist/jquery.Thailand.min.css">
+<script type="text/javascript" src="/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
   </head>
@@ -40,11 +40,16 @@
 }(document, 'script', 'Messenger'));
       
     function GenerateProvice(){console.log("changed");}
+    
+      
+      
+   </script>
+  <script>
     $.Thailand({ 
     
     // path หรือ url ไปยัง database เลือกได้ 4 แบบตามความเหมาะสม 
     // db.json, db.zip, geodb.json, geodb.zip
-    database: './jquery.Thailand.js-master/jquery.Thailand.js/database/db.json', 
+    database: '/jquery.Thailand.js/database/db.json', 
     
     // auto, zip หรือ json; การใส่ auto ลงไป ระบบจะแยกแยะเอาเองตามนามสกุลของ database
     // (ไม่ระบุก็ได้ ค่า default คือ auto)
@@ -101,9 +106,7 @@
         console.info('Autocomplete is ready!');
     }
 });
-      
-      
-   </script>
+  </script>
     
         <form id ="my_form"  >
      <input type="hidden" name="UserID" id="psid" value="{{ id}}"/>
