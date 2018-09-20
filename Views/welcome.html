@@ -6,22 +6,24 @@
       <title>Cool Webview</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
   
-   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"></script> 
     
     <script type="text/javascript" src="webvUI.min.js"></script>
-    <link rel="stylesheet" href="/webvUI.min.css">
-    <link rel="stylesheet" href="/webvUI-menu.min.css">
+  
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/jquery.Thailand.js/dependencies/JQL.min.js"></script>
 <script type="text/javascript" src="/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>  
+     <link rel="stylesheet" href="/webvUI.min.css">
+    <link rel="stylesheet" href="/webvUI-menu.min.css">
   <link rel="stylesheet" href="/jquery.Thailand.js/dist/jquery.Thailand.min.css">
 <script type="text/javascript" src="/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    
+     
   </head>
  
   
@@ -44,69 +46,7 @@
       
       
    </script>
-  <script>
-    $.Thailand({ 
-    
-    // path หรือ url ไปยัง database เลือกได้ 4 แบบตามความเหมาะสม 
-    // db.json, db.zip, geodb.json, geodb.zip
-    database: '/jquery.Thailand.js/database/db.json', 
-    
-    // auto, zip หรือ json; การใส่ auto ลงไป ระบบจะแยกแยะเอาเองตามนามสกุลของ database
-    // (ไม่ระบุก็ได้ ค่า default คือ auto)
-    database_type: 'auto', 
-    
-    // อ่านหัวข้อถัดไป
-    // (ปกติไม่ต้องระบุ)
-    zip_worker_path: false, 
-    
-    // ขนาดของตัวเลือกใน Dropdown 
-    // (ไม่ระบุก็ได้ ค่า default คือ 20)
-    autocomplete_size: 20, 
-    
-    // input ของตำบล
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $district: $('#district'), 
-    
-    // input area code ของตำบล
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $district_code: $('#district_code'), 
-    
-    // input ของอำเภอ
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $amphoe: $('#amphoe'), 
-    
-    // input area code ของอำเภอ
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $amphoe_code: $('#amphoe_code'), 
-    
-    // input ของจังหวัด
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $province: $('#province'), 
-    
-    // input area code ของจังหวัด
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $province_code: $('#province_code'), 
-    
-    // input ของรหัสไปรษณีย์
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $zipcode: $('#zipcode'), 
-    
-    // input ของช่องค้นหา 
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)    
-    
-    // callback เมื่อเกิดการ auto complete ขึ้น
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    onDataFill: function(data){ 
-        console.log('Data Filled', data);
-    },
-    
-    // callback เมื่อโหลดฐานข้อมูลเสร็จและระบบ Auto Complete พร้อมที่จะทำงาน
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    onLoad: function(){ 
-        console.info('Autocomplete is ready!');
-    }
-});
-  </script>
+
     
         <form id ="my_form"  >
      <input type="hidden" name="UserID" id="psid" value="{{ id}}"/>
@@ -237,7 +177,69 @@
     </div>
           
   </form>
+      <script>
+    $.Thailand({ 
     
+    // path หรือ url ไปยัง database เลือกได้ 4 แบบตามความเหมาะสม 
+    // db.json, db.zip, geodb.json, geodb.zip
+    database: '/jquery.Thailand.js/database/db.json', 
+    
+    // auto, zip หรือ json; การใส่ auto ลงไป ระบบจะแยกแยะเอาเองตามนามสกุลของ database
+    // (ไม่ระบุก็ได้ ค่า default คือ auto)
+    database_type: 'auto', 
+    
+    // อ่านหัวข้อถัดไป
+    // (ปกติไม่ต้องระบุ)
+    zip_worker_path: false, 
+    
+    // ขนาดของตัวเลือกใน Dropdown 
+    // (ไม่ระบุก็ได้ ค่า default คือ 20)
+    autocomplete_size: 20, 
+    
+    // input ของตำบล
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $district: $('#district'), 
+    
+    // input area code ของตำบล
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $district_code: $('#district_code'), 
+    
+    // input ของอำเภอ
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $amphoe: $('#amphoe'), 
+    
+    // input area code ของอำเภอ
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $amphoe_code: $('#amphoe_code'), 
+    
+    // input ของจังหวัด
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $province: $('#province'), 
+    
+    // input area code ของจังหวัด
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $province_code: $('#province_code'), 
+    
+    // input ของรหัสไปรษณีย์
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    $zipcode: $('#zipcode'), 
+    
+    // input ของช่องค้นหา 
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)    
+    
+    // callback เมื่อเกิดการ auto complete ขึ้น
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    onDataFill: function(data){ 
+        console.log('Data Filled', data);
+    },
+    
+    // callback เมื่อโหลดฐานข้อมูลเสร็จและระบบ Auto Complete พร้อมที่จะทำงาน
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
+    onLoad: function(){ 
+        console.info('Autocomplete is ready!');
+    }
+});
+  </script>
   </body>
 <script> window.extAsyncInit = function() {console.log("ready")
                                 $('#my_form').submit(function(event){
