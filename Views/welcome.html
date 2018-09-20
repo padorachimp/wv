@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/webvUI.min.css">
     <link rel="stylesheet" href="/webvUI-menu.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="./jquery.Thailand.js-master/jquery.Thailand.js/dependencies/JQL.min.js"></script>
 <script type="text/javascript" src="./jquery.Thailand.js-master/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>  
@@ -86,8 +85,7 @@
     $zipcode: $('#zipcode'), 
     
     // input ของช่องค้นหา 
-    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
-    $search: $('#search'), 
+    // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)    
     
     // callback เมื่อเกิดการ auto complete ขึ้น
     // (ไม่ระบุก็ได้หากไม่จำเป็นต้องใช้)
@@ -187,7 +185,7 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="Province"  onchange="GenerateProvice()">
+                            <input class="webvUI-input" type="text" placeholder="Province" name="Province" id="province"  onchange="GenerateProvice()">
                       
                       </div>
                     </div>
@@ -199,18 +197,18 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="District" name ="District">
+                            <input class="webvUI-input" type="text" placeholder="District" name ="District" id="district">
                         </div>
                     </div>
                 </div>
 
                 <div class="webvUI-cells__title">
-                    City
+                    amphoe
                 </div>
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="City" name="City">
+                            <input class="webvUI-input" type="text" placeholder="City" name="city" id="amphoe">
                         </div>
                     </div>
                 </div>
@@ -221,7 +219,7 @@
                 <div class="webvUI-cells">
                     <div class="webvUI-cell">
                         <div class="webvUI-cell__bd">
-                            <input class="webvUI-input" type="text" placeholder="Zip Code" name="Zip">
+                            <input class="webvUI-input" type="text" placeholder="Zip Code" name="Zip" id="zipcode">
                         </div>
                     </div>
                 </div>
