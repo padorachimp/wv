@@ -29,9 +29,9 @@ app.get('/', function(req, res) {
 //showwebview
 
 app.get('/showwebview', (req, res) => {
-	let body = req.query;
+let body = req.query;
    const fullUrl = 'https://' + req.get('host')
-    let response = {messages:[{
+   let response = {messages:[{
     attachment: {
         type: "template",
         payload: {
@@ -114,48 +114,3 @@ var listener = app.listen(process.env.PORT, function() {
 
 
 
-/*
-const getZipCodes = (data) => {
-  let html =[]
-  let zipcodes = Immutable.Map();
-  for(let i = 0; i<data.length; i++){
-    let record = data[i];
-    if(!zipcodes.has(record['province'])){
-      zipcodes = zipcodes.set(record['province'], Immutable.Map());
-    }
-    
-    let province = zipcodes.get(record['province']);
-    if(!province.has(record['district'])){
-      province = province.set(record['district'], Immutable.List());
-      zipcodes = zipcodes.set(record['province'], province);
-    }
-    
-    let district = province.get(record['district']);
-        district = district.push(JSON.stringify({subdistrict: record.subdistrict, zipcode: record.zipcode}));
-        province = province.set(record['district'], district);
-        zipcodes = zipcodes.set(record['province'], province);
-    let value= record['province']+' '+record['district']+' '+record.subdistrict+' '+record.zipcode;
-    html.push(value);
-  }
-  return [zipcodes, html];
-};
-/*
-//const Googledata = require('./ThailandAddress/GetData.js');
-//Googledata.search().then((data=>{console.log(data);}));
-const fs = require('fs');
-let zipcodes;
-var data = fs.readFile('./ThailandAddress/minidata.json','utf8', (err, data) => {
-zipcodes = getZipCodes(JSON.parse(data));
-
-
-// console.log('data',zipcodes.get('กรุงเทพมหานคร'));
- //console.log('shitto da', zipcodes.get('กรุงเทพมหานคร').get('พระนคร'));  
-});
-
-
-
-app.get('/getzipcodes', (req, res) => {
-  
-  res.send(zipcodes[1]);
-});
-*/
